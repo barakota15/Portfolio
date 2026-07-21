@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Project | Eventa Studio</title>
+  <meta name="description" content="Book your custom event website project with Eventa Studio." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+  <div class="loader">
+    <div class="loader-logo">Eventa Studio</div>
+    <div class="loader-bar-container">
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+  <div class="scroll-progress"></div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <div class="page-transition"></div>
+
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo"><span class="logo-icon">E</span>
+        <span data-config="studioName">Eventa Studio</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="testimonials.html" class="nav-link">Testimonials</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <a href="booking.html" class="btn btn-primary btn-sm btn-ripple">Book Now</a>
+        <div class="nav-toggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="nav-mobile">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="services.html" class="nav-link">Services</a>
+    <a href="portfolio.html" class="nav-link">Portfolio</a>
+    <a href="pricing.html" class="nav-link">Pricing</a>
+    <a href="testimonials.html" class="nav-link">Testimonials</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="booking.html" class="nav-link">Book Now</a>
+  </div>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="reveal">Book Your Project</h1>
+      <p class="section-subtitle reveal">
+        Tell me about your event and I'll create the perfect website for it.
+        Fill out the form below to get started.
+      </p>
+    </div>
+  </section>
+
+  <section class="section pt-0">
+    <div class="container">
+      <div class="booking-wizard reveal" style="
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--color-bg-secondary);
+            padding: 3rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--color-border);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+          ">
+        <!-- Wizard Progress -->
+        <div class="wizard-progress mb-12">
+          <div class="wizard-progress-bar" style="width: 20%"></div>
+          <div class="wizard-step-indicator active">1</div>
+          <div class="wizard-step-indicator">2</div>
+          <div class="wizard-step-indicator">3</div>
+          <div class="wizard-step-indicator">4</div>
+        </div>
+
+        <!-- Panel 1 -->
+        <div class="wizard-panel active" data-step="1">
+          <h2 class="text-xl mb-6">Choose Your Event Type</h2>
+          <div class="event-type-grid">
+            <div class="event-type-card active">
+              <i class="fas fa-heart"></i>
+              <span>Wedding</span>
+            </div>
+            <div class="event-type-card">
+              <i class="fas fa-cake-candles"></i>
+              <span>Birthday</span>
+            </div>
+            <div class="event-type-card">
+              <i class="fas fa-building"></i>
+              <span>Corporate</span>
+            </div>
+            <div class="event-type-card">
+              <i class="fas fa-baby"></i>
+              <span>Baby Shower</span>
+            </div>
+            <div class="event-type-card">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Graduation</span>
+            </div>
+            <div class="event-type-card">
+              <i class="fas fa-ring"></i>
+              <span>Engagement</span>
+            </div>
+            <div class="event-type-card">
+              <i class="fas fa-microphone"></i>
+              <span>Conference</span>
+            </div>
+            <div class="event-type-card">
+              <i class="fas fa-music"></i>
+              <span>Festival</span>
+            </div>
+            <div class="event-type-card">
+              <i class="fas fa-sparkles"></i>
+              <span>Other</span>
+            </div>
+          </div>
+          <div class="wizard-actions flex justify-start mt-8">
+            <button class="btn btn-primary wizard-next">
+              Next Step <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Panel 2 -->
+        <div class="wizard-panel" data-step="2">
+          <h2 class="text-xl mb-6">Select Your Style</h2>
+          <div class="style-grid mb-8">
+            <div class="style-card active" style="
+                  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+                  color: #333;
+                ">
+              <span class="style-card-label" style="background: rgba(0, 0, 0, 0.1); color: #000">Minimal & Clean</span>
+            </div>
+            <div class="style-card" style="background: linear-gradient(135deg, #ff007f, #7f00ff)">
+              <span class="style-card-label">Bold & Vibrant</span>
+            </div>
+            <div class="style-card" style="
+                  background: linear-gradient(135deg, #111, #333);
+                  border: 1px solid #c9a84c;
+                ">
+              <span class="style-card-label" style="color: #c9a84c">Elegant & Luxury</span>
+            </div>
+            <div class="style-card" style="background: linear-gradient(135deg, #ffb6c1, #add8e6)">
+              <span class="style-card-label" style="background: rgba(0, 0, 0, 0.2)">Playful & Fun</span>
+            </div>
+          </div>
+
+          <h3 class="text-lg mb-4">Choose Color Palette</h3>
+          <div class="palette-grid">
+            <div class="palette-option active">
+              <div class="flex h-12 rounded overflow-hidden">
+                <div style="flex: 1; background: #f4e4d4"></div>
+                <div style="flex: 1; background: #c9a84c"></div>
+                <div style="flex: 1; background: #e8b4b8"></div>
+                <div style="flex: 1; background: #2d2d2d"></div>
+              </div>
+              <p class="mt-2 text-sm text-center">Rose & Gold</p>
+            </div>
+            <div class="palette-option">
+              <div class="flex h-12 rounded overflow-hidden">
+                <div style="flex: 1; background: #e0f0ff"></div>
+                <div style="flex: 1; background: #3b82f6"></div>
+                <div style="flex: 1; background: #1e40af"></div>
+                <div style="flex: 1; background: #0f172a"></div>
+              </div>
+              <p class="mt-2 text-sm text-center">Ocean Blue</p>
+            </div>
+            <div class="palette-option">
+              <div class="flex h-12 rounded overflow-hidden">
+                <div style="flex: 1; background: #f0f4e8"></div>
+                <div style="flex: 1; background: #10b981"></div>
+                <div style="flex: 1; background: #065f46"></div>
+                <div style="flex: 1; background: #1a1a1a"></div>
+              </div>
+              <p class="mt-2 text-sm text-center">Forest</p>
+            </div>
+            <div class="palette-option">
+              <div class="flex h-12 rounded overflow-hidden">
+                <div style="flex: 1; background: #fff4e6"></div>
+                <div style="flex: 1; background: #f59e0b"></div>
+                <div style="flex: 1; background: #ea580c"></div>
+                <div style="flex: 1; background: #1c1917"></div>
+              </div>
+              <p class="mt-2 text-sm text-center">Sunset</p>
+            </div>
+          </div>
+          <div class="wizard-actions flex justify-between mt-8">
+            <button class="btn btn-secondary wizard-prev">
+              <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <button class="btn btn-primary wizard-next">
+              Next Step <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Panel 3 -->
+        <div class="wizard-panel" data-step="3">
+          <h2 class="text-xl mb-6">Project Details</h2>
+          <div class="form-group mb-6">
+            <label class="form-label">Event Date / Deadline</label>
+            <input type="date" class="form-input" required />
+          </div>
+          <div class="form-group mb-6">
+            <label class="form-label">Preferred Package</label>
+            <select class="form-input" required>
+              <option value="" disabled selected>Select a package...</option>
+              <option value="starter">Starter ($20)</option>
+              <option value="professional">Professional ($50)</option>
+              <option value="premium">Premium ($200)</option>
+              <option value="custom">Not sure / Custom Quote</option>
+            </select>
+          </div>
+          <div class="form-group mb-6">
+            <label class="form-label">Tell me about your event</label>
+            <textarea class="form-input" rows="4"
+              placeholder="Describe your event, expected guests, and key features you need..."></textarea>
+          </div>
+          <div class="wizard-actions flex justify-between mt-8">
+            <button class="btn btn-secondary wizard-prev">
+              <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <button class="btn btn-primary wizard-next">
+              Next Step <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Panel 4 -->
+        <div class="wizard-panel" data-step="4">
+          <h2 class="text-xl mb-6">Contact Information</h2>
+          <div class="form-row mb-6">
+            <div class="form-group">
+              <label class="form-label">Full Name</label>
+              <input type="text" name="name" class="form-input" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" name="email" class="form-input" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-group mb-6">
+            <label class="form-label">Phone Number (Optional)</label>
+            <input type="tel" name="phone" class="form-input" placeholder="+1 (234) 567-890" />
+          </div>
+          <div class="form-group mb-6">
+            <label class="form-label">Additional Notes</label>
+            <textarea class="form-input" rows="3" placeholder="Anything else I should know?"></textarea>
+          </div>
+          <div class="wizard-actions flex justify-between mt-8">
+            <button class="btn btn-secondary wizard-prev">
+              <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <button class="btn btn-primary btn-ripple wizard-submit">
+              Submit Inquiry <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-icon">E</span>
+            <span data-config="studioName">Eventa Studio</span>
+          </div>
+          <p class="footer-desc" data-config="footerDescription">
+            Creating premium custom event websites that make your special
+            moments unforgettable. From weddings to corporate events, I craft
+            digital experiences that wow.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Pages</h4>
+          <div class="footer-links">
+            <a href="about.html" class="footer-link">About</a>
+            <a href="services.html" class="footer-link">Services</a>
+            <a href="portfolio.html" class="footer-link">Portfolio</a>
+            <a href="pricing.html" class="footer-link">Pricing</a>
+            <a href="process.html" class="footer-link">Process</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Services</h4>
+          <div class="footer-links">
+            <a href="services.html" class="footer-link">Wedding Websites</a>
+            <a href="services.html" class="footer-link">Event Landing Pages</a>
+            <a href="services.html" class="footer-link">RSVP Systems</a>
+            <a href="services.html" class="footer-link">Digital Invitations</a>
+            <a href="services.html" class="footer-link">Corporate Events</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact</h4>
+          <div class="footer-links">
+            <a href="mailto:hello@eventastudio.com" class="footer-link" data-config="contactEmail"
+              data-config-href="contactEmail">hello@eventastudio.com</a>
+            <a href="tel:+1234567890" class="footer-link" data-config="contactPhone" data-config-href="contactPhone">+1
+              (234) 567-890</a>
+            <a href="contact.html" class="footer-link">Contact Form</a>
+            <a href="booking.html" class="footer-link">Book a Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Eventa Studio. All rights reserved.</p>
+        <p>
+          Crafted with <span class="text-gold">&hearts;</span> for
+          unforgettable events
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+
+</html>

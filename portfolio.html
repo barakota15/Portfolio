@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Eventa Studio</title>
+  <meta name="description" content="View our portfolio of premium custom event websites.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+  <div class="loader">
+    <div class="loader-logo">Eventa Studio</div>
+    <div class="loader-bar-container">
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+  <div class="scroll-progress"></div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <div class="page-transition"></div>
+
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo"><span class="logo-icon">E</span> <span data-config="studioName">Eventa
+          Studio</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="portfolio.html" class="nav-link active">Portfolio</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="testimonials.html" class="nav-link">Testimonials</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle theme"><i class="fas fa-sun"></i></button>
+        <a href="booking.html" class="btn btn-primary btn-sm btn-ripple">Book Now</a>
+        <div class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="nav-mobile">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="services.html" class="nav-link">Services</a>
+    <a href="portfolio.html" class="nav-link">Portfolio</a>
+    <a href="pricing.html" class="nav-link">Pricing</a>
+    <a href="testimonials.html" class="nav-link">Testimonials</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="booking.html" class="nav-link">Book Now</a>
+  </div>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="reveal">My Latest Work</h1>
+      <p class="section-subtitle reveal">Explore my portfolio of custom-designed event websites. Each project is crafted
+        with care to reflect the unique spirit of the celebration.</p>
+    </div>
+  </section>
+
+  <section class="section pt-0">
+    <div class="container">
+
+      <div class="portfolio-filters reveal">
+        <button class="filter-btn active" data-filter="all">All Events</button>
+        <button class="filter-btn" data-filter="wedding">Weddings</button>
+        <button class="filter-btn" data-filter="corporate">Corporate</button>
+        <button class="filter-btn" data-filter="celebration">Celebrations</button>
+        <button class="filter-btn" data-filter="other">Other Events</button>
+      </div>
+
+      <div class="portfolio-grid stagger-children">
+
+        <!-- Wedding -->
+        <div class="project-card reveal" data-category="wedding">
+          <div class="project-thumbnail">
+            <div style="width:100%;height:100%;background:#f4e4d4;">
+              <img src="images/portfolio/wedding.png" alt="Wedding Website Mockup"
+                style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="project-overlay">
+              <a href="demo-websites/wedding/" class="btn btn-primary btn-sm">Live Preview</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Wedding</span>
+            <h3 class="project-title">Sara & Adam</h3>
+            <p class="project-desc">A romantic, rose-gold wedding website with RSVP, countdown, and an interactive love
+              story timeline.</p>
+            <div class="project-tags">
+              <span class="project-tag">RSVP</span>
+              <span class="project-tag">Countdown</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Birthday -->
+        <div class="project-card reveal" data-category="celebration">
+          <div class="project-thumbnail">
+            <div style="width:100%;height:100%;background:#ff6b6b;">
+              <img src="images/portfolio/birthday.png" alt="Birthday Website Mockup"
+                style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="project-overlay">
+              <a href="demo-websites/birthday/" class="btn btn-primary btn-sm">Live Preview</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Birthday</span>
+            <h3 class="project-title">Luna's 30th Birthday</h3>
+            <p class="project-desc">A vibrant birthday celebration website with animated confetti, guest RSVP, and a
+              photo gallery.</p>
+            <div class="project-tags">
+              <span class="project-tag">Animation</span>
+              <span class="project-tag">RSVP</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Corporate -->
+        <div class="project-card reveal" data-category="corporate">
+          <div class="project-thumbnail">
+            <div style="width:100%;height:100%;background:#1a1a2e;">
+              <img src="images/portfolio/conference.png" alt="Corporate Website Mockup"
+                style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="project-overlay">
+              <a href="demo-websites/conference/" class="btn btn-primary btn-sm">Live Preview</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Conference</span>
+            <h3 class="project-title">TechForward Summit</h3>
+            <p class="project-desc">A sleek, dark-mode conference landing page with speaker profiles, schedule, and
+              registration.</p>
+            <div class="project-tags">
+              <span class="project-tag">Registration</span>
+              <span class="project-tag">Schedule</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Baby Shower -->
+        <div class="project-card reveal" data-category="celebration">
+          <div class="project-thumbnail">
+            <div style="width:100%;height:100%;background:#c1e1c1;">
+              <img src="images/portfolio/babyshower.png" alt="Baby Shower Website Mockup"
+                style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="project-overlay">
+              <a href="demo-websites/baby-shower/" class="btn btn-primary btn-sm">Live Preview</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Baby Shower</span>
+            <h3 class="project-title">Baby Smith Arrival</h3>
+            <p class="project-desc">Pastel-themed baby shower site featuring a gift registry link, games info, and venue
+              directions.</p>
+            <div class="project-tags">
+              <span class="project-tag">Registry</span>
+              <span class="project-tag">Maps</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Graduation -->
+        <div class="project-card reveal" data-category="other">
+          <div class="project-thumbnail">
+            <div style="width:100%;height:100%;background:#001f3f;">
+              <img src="images/portfolio/graduation.png" alt="Graduation Website Mockup"
+                style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="project-overlay">
+              <a href="demo-websites/graduation/" class="btn btn-primary btn-sm">Live Preview</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Graduation</span>
+            <h3 class="project-title">Class of 2025</h3>
+            <p class="project-desc">Academic navy and gold website for graduation ceremonies and after-party details.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Schedule</span>
+              <span class="project-tag">Gallery</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Engagement -->
+        <div class="project-card reveal" data-category="wedding">
+          <div class="project-thumbnail">
+            <div style="width:100%;height:100%;background:#f2e3c6;">
+              <img src="images/portfolio/engagement.png" alt="Engagement Website Mockup"
+                style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="project-overlay">
+              <a href="demo-websites/engagement/" class="btn btn-primary btn-sm">Live Preview</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Engagement</span>
+            <h3 class="project-title">Sarah & Hany</h3>
+            <p class="project-desc">Soft, dreamy watercolor-style announcement page for an engagement party.</p>
+            <div class="project-tags">
+              <span class="project-tag">Announcement</span>
+              <span class="project-tag">RSVP</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gender Reveal -->
+        <div class="project-card reveal" data-category="celebration">
+          <div class="project-thumbnail">
+            <div style="width:100%;height:100%;background:#ffb6c1;">
+              <img src="images/portfolio/reveal.png" alt="Gender Reveal Website Mockup"
+                style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="project-overlay">
+              <a href="demo-websites/gender-reveal/" class="btn btn-primary btn-sm">Live Preview</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Gender Reveal</span>
+            <h3 class="project-title">The Big Reveal</h3>
+            <p class="project-desc">Interactive split-design page with a hidden reveal animation and guest polling.</p>
+            <div class="project-tags">
+              <span class="project-tag">Interactive</span>
+              <span class="project-tag">Polling</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Corporate Event -->
+        <div class="project-card reveal" data-category="corporate">
+          <div class="project-thumbnail">
+            <div style="width:100%;height:100%;background:#36454F;">
+              <img src="images/portfolio/corporate.png" alt="Corporate Website Mockup"
+                style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="project-overlay">
+              <a href="demo-websites/corporate-event/" class="btn btn-primary btn-sm">Live Preview</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Corporate</span>
+            <h3 class="project-title">Annual Gala 2025</h3>
+            <p class="project-desc">Professional charcoal and teal design for a corporate awards gala and dinner.</p>
+            <div class="project-tags">
+              <span class="project-tag">Formal</span>
+              <span class="project-tag">Tickets</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Festival -->
+        <div class="project-card reveal" data-category="other">
+          <div class="project-thumbnail">
+            <div style="width:100%;height:100%;background:#39ff14;">
+              <img src="images/portfolio/festival.png" alt="Festival Website Mockup"
+                style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="project-overlay">
+              <a href="demo-websites/festival/" class="btn btn-primary btn-sm">Live Preview</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Festival</span>
+            <h3 class="project-title">Neon Vibes Fest</h3>
+            <p class="project-desc">High-energy neon gradient website featuring dynamic lineups and ticket sales
+              integration.</p>
+            <div class="project-tags">
+              <span class="project-tag">Lineup</span>
+              <span class="project-tag">Dynamic</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Family Reunion -->
+        <div class="project-card reveal" data-category="celebration">
+          <div class="project-thumbnail">
+            <div style="width:100%;height:100%;background:#8b4513;">
+              <img src="images/portfolio/reunion.png" alt="Family Reunion Website Mockup"
+                style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="project-overlay">
+              <a href="demo-websites/family-reunion/" class="btn btn-primary btn-sm">Live Preview</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Reunion</span>
+            <h3 class="project-title">Johnson Family Reunion</h3>
+            <p class="project-desc">Warm, rustic earth tones for a family gathering website with lodging info and
+              activity schedules.</p>
+            <div class="project-tags">
+              <span class="project-tag">Information</span>
+              <span class="project-tag">Schedule</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Memorial -->
+        <div class="project-card reveal" data-category="other">
+          <div class="project-thumbnail">
+            <div style="width:100%;height:100%;background:#000080;">
+              <img src="images/portfolio/memorial.png" alt="Memorial Website Mockup"
+                style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="project-overlay">
+              <a href="demo-websites/memorial/" class="btn btn-primary btn-sm">Live Preview</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Memorial</span>
+            <h3 class="project-title">In Loving Memory</h3>
+            <p class="project-desc">A serene, minimalist tribute page providing service details, obituary, and a digital
+              guestbook.</p>
+            <div class="project-tags">
+              <span class="project-tag">Tribute</span>
+              <span class="project-tag">Guestbook</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Anniversary -->
+        <div class="project-card reveal" data-category="celebration">
+          <div class="project-thumbnail">
+            <div style="width:100%;height:100%;background:#800020;">
+              <img src="images/portfolio/anniversary.png" alt="Anniversary Website Mockup"
+                style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="project-overlay">
+              <a href="demo-websites/anniversary/" class="btn btn-primary btn-sm">Live Preview</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Anniversary</span>
+            <h3 class="project-title">50 Golden Years</h3>
+            <p class="project-desc">Elegant burgundy and gold celebration page featuring a 'Then & Now' photo gallery.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Elegant</span>
+              <span class="project-tag">Gallery</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content reveal">
+        <h2 class="cta-title">Ready to Create Something<br><span class="text-gradient">Extraordinary?</span></h2>
+        <p class="cta-text">Let's design a stunning event website that your guests will remember forever.</p>
+        <div class="flex items-center justify-center gap-4">
+          <a href="booking.html" class="btn btn-primary btn-lg btn-ripple">Start Your Project <i
+              class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><span class="logo-icon">E</span> <span data-config="studioName">Eventa Studio</span>
+          </div>
+          <p class="footer-desc" data-config="footerDescription">Creating premium custom event websites that make your
+            special moments unforgettable. From weddings to corporate events, I craft digital experiences that wow.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Pages</h4>
+          <div class="footer-links">
+            <a href="about.html" class="footer-link">About</a>
+            <a href="services.html" class="footer-link">Services</a>
+            <a href="portfolio.html" class="footer-link">Portfolio</a>
+            <a href="pricing.html" class="footer-link">Pricing</a>
+            <a href="process.html" class="footer-link">Process</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Services</h4>
+          <div class="footer-links">
+            <a href="services.html" class="footer-link">Wedding Websites</a>
+            <a href="services.html" class="footer-link">Event Landing Pages</a>
+            <a href="services.html" class="footer-link">RSVP Systems</a>
+            <a href="services.html" class="footer-link">Digital Invitations</a>
+            <a href="services.html" class="footer-link">Corporate Events</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact</h4>
+          <div class="footer-links">
+            <a href="mailto:hello@eventastudio.com" class="footer-link" data-config="contactEmail"
+              data-config-href="contactEmail">hello@eventastudio.com</a>
+            <a href="tel:+1234567890" class="footer-link" data-config="contactPhone" data-config-href="contactPhone">+1
+              (234) 567-890</a>
+            <a href="contact.html" class="footer-link">Contact Form</a>
+            <a href="booking.html" class="footer-link">Book a Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Eventa Studio. All rights reserved.</p>
+        <p>Crafted with <span class="text-gold">&hearts;</span> for unforgettable events</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/portfolio.js"></script>
+</body>
+
+</html>
