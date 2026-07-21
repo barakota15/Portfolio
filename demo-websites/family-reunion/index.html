@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Johnson Family Reunion | Warm Rustic Gathering</title>
+    <meta name="description" content="Welcome to the Johnson Family Reunion. Join us for a weekend of family traditions, memories, and togetherness.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loader Animation -->
+    <div id="loader" class="loader-wrapper">
+        <div class="loader-leaf"></div>
+    </div>
+
+    <!-- Sticky Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <nav class="back-nav">
+<a href="../../portfolio.html" class="back-btn">← Back to Portfolio</a>
+</nav>
+            <div class="logo">Johnson Family</div>
+            <div class="menu-toggle" id="mobile-menu" aria-label="Toggle menu" role="button" tabindex="0">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#details">Details</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#lodging">Lodging</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#venue">Venue</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#rsvp" class="btn-nav">RSVP</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <header id="home" class="hero section-reveal">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="floating-leaves">
+                <!-- SVG Leaves animated via JS -->
+            </div>
+            <h1 class="fade-in-up">Johnson Family Reunion</h1>
+            <p class="subtitle fade-in-up delay-1">Rooted in Love, Growing in Memories.</p>
+            <p class="date fade-in-up delay-2">August 15-17, 2026</p>
+            <div class="hero-buttons fade-in-up delay-3">
+                <a href="#schedule" class="btn btn-primary ripple">View Schedule</a>
+                <a href="#rsvp" class="btn btn-secondary ripple">RSVP Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. About Our Reunion Section -->
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <div class="section-header text-center slide-up">
+                <h2>Our Family Tradition</h2>
+                <div class="divider">
+                    <svg viewBox="0 0 100 20" width="100" height="20"><path d="M0 10 Q 25 0, 50 10 T 100 10" fill="none" stroke="#6F4E37" stroke-width="2"/></svg>
+                </div>
+            </div>
+            <div class="about-grid">
+                <div class="about-card slide-right">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 7.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <h3>Togetherness</h3>
+                    <p>Coming together from across the country to celebrate our shared history and build stronger bonds for the generations to come.</p>
+                </div>
+                <div class="about-card slide-up delay-1">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    </div>
+                    <h3>Making Memories</h3>
+                    <p>From storytelling by the campfire to friendly competitions, we're making new memories while cherishing the old ones.</p>
+                </div>
+                <div class="about-card slide-left delay-2">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>Multi-Generational</h3>
+                    <p>Honoring our elders and welcoming the newest additions to our family tree in a warm, inclusive environment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Reunion Details Section -->
+    <section id="details" class="details section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center slide-up">
+                <h2>Reunion Details</h2>
+                <div class="divider"><svg viewBox="0 0 100 20" width="100" height="20"><path d="M0 10 Q 25 0, 50 10 T 100 10" fill="none" stroke="#6F4E37" stroke-width="2"/></svg></div>
+            </div>
+            <div class="details-grid">
+                <div class="detail-item slide-up">
+                    <div class="detail-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    </div>
+                    <h3>Date</h3>
+                    <p>August 15-17, 2026</p>
+                    <p class="sub-text">Friday to Sunday</p>
+                </div>
+                <div class="detail-item slide-up delay-1">
+                    <div class="detail-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h3>Time</h3>
+                    <p>Check-in: 3:00 PM</p>
+                    <p class="sub-text">Check-out: 11:00 AM</p>
+                </div>
+                <div class="detail-item slide-up delay-2">
+                    <div class="detail-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <h3>Main Venue</h3>
+                    <p>Whispering Pines Lodge</p>
+                    <p class="sub-text">123 Nature Trail, Forestville</p>
+                </div>
+                <div class="detail-item slide-up delay-3">
+                    <div class="detail-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.38 3.46L16 2a8.5 8.5 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>
+                    </div>
+                    <h3>Dress Code</h3>
+                    <p>Casual & Comfortable</p>
+                    <p class="sub-text">Bring layers for cool evenings</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Activity Schedule Section -->
+    <section id="schedule" class="schedule section-padding">
+        <div class="container">
+            <div class="section-header text-center slide-up">
+                <h2>Activity Schedule</h2>
+                <div class="divider"><svg viewBox="0 0 100 20" width="100" height="20"><path d="M0 10 Q 25 0, 50 10 T 100 10" fill="none" stroke="#6F4E37" stroke-width="2"/></svg></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item slide-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Welcome Breakfast</h3>
+                        <span class="time">Friday, 9:00 AM</span>
+                        <p>Kick off the weekend with a hearty breakfast and warm greetings.</p>
+                    </div>
+                </div>
+                <div class="timeline-item slide-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Family Games</h3>
+                        <span class="time">Friday, 2:00 PM</span>
+                        <p>Sack races, tug-of-war, and relay events for all ages.</p>
+                    </div>
+                </div>
+                <div class="timeline-item slide-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>BBQ Dinner</h3>
+                        <span class="time">Saturday, 6:00 PM</span>
+                        <p>A grand feast featuring Uncle Bob's famous ribs.</p>
+                    </div>
+                </div>
+                <div class="timeline-item slide-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Campfire Stories</h3>
+                        <span class="time">Saturday, 8:30 PM</span>
+                        <p>S'mores, songs, and sharing tales of family history.</p>
+                    </div>
+                </div>
+                <div class="timeline-item slide-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Farewell Brunch</h3>
+                        <span class="time">Sunday, 10:00 AM</span>
+                        <p>Final goodbyes and planning for our next gathering.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Lodging Information Section -->
+    <section id="lodging" class="lodging section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center slide-up">
+                <h2>Lodging Options</h2>
+                <div class="divider"><svg viewBox="0 0 100 20" width="100" height="20"><path d="M0 10 Q 25 0, 50 10 T 100 10" fill="none" stroke="#6F4E37" stroke-width="2"/></svg></div>
+            </div>
+            <div class="lodging-grid">
+                <div class="lodging-card slide-up">
+                    <div class="lodging-img cabin-img"></div>
+                    <div class="lodging-info">
+                        <h3>Family Cabins</h3>
+                        <p>Cozy rustic cabins on-site. Sleeps 4-6 people.</p>
+                        <ul class="amenities">
+                            <li>✓ Kitchenette</li>
+                            <li>✓ Fireplace</li>
+                        </ul>
+                        <p class="distance">Distance: 0 miles (On-site)</p>
+                        <a href="#" class="btn btn-outline full-width">Reserve Cabin</a>
+                    </div>
+                </div>
+                <div class="lodging-card slide-up delay-1">
+                    <div class="lodging-img hotel-img"></div>
+                    <div class="lodging-info">
+                        <h3>Nearby Hotel</h3>
+                        <p>Modern comfort just a short drive away. Group rates available.</p>
+                        <ul class="amenities">
+                            <li>✓ Free Breakfast</li>
+                            <li>✓ Pool</li>
+                        </ul>
+                        <p class="distance">Distance: 5 miles</p>
+                        <a href="#" class="btn btn-outline full-width">Book Room</a>
+                    </div>
+                </div>
+                <div class="lodging-card slide-up delay-2">
+                    <div class="lodging-img rv-img"></div>
+                    <div class="lodging-info">
+                        <h3>Campground & RV</h3>
+                        <p>Spots with full hookups and beautiful lake views.</p>
+                        <ul class="amenities">
+                            <li>✓ Water/Electric</li>
+                            <li>✓ Showers</li>
+                        </ul>
+                        <p class="distance">Distance: 0 miles (On-site)</p>
+                        <a href="#" class="btn btn-outline full-width">Book Spot</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Countdown Timer Section (Reordered for visual balance) -->
+    <section id="countdown" class="countdown-section section-padding">
+        <div class="countdown-overlay"></div>
+        <div class="container relative">
+            <div class="section-header text-center slide-up text-white">
+                <h2>Counting Down to the Reunion</h2>
+            </div>
+            <div class="countdown-timer slide-up" id="timer">
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <p>Days</p>
+                </div>
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <p>Hours</p>
+                </div>
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <p>Minutes</p>
+                </div>
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <p>Seconds</p>
+                </div>
+            </div>
+            <div id="countdown-message" class="countdown-message hidden text-center text-white h3">
+                We're So Happy You're Here!
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Family Activities Section -->
+    <section id="activities" class="activities section-padding">
+        <div class="container">
+            <div class="section-header text-center slide-up">
+                <h2>Family Activities</h2>
+                <div class="divider"><svg viewBox="0 0 100 20" width="100" height="20"><path d="M0 10 Q 25 0, 50 10 T 100 10" fill="none" stroke="#6F4E37" stroke-width="2"/></svg></div>
+            </div>
+            <div class="activities-grid">
+                <div class="activity-card slide-up">
+                    <div class="activity-icon">🎣</div>
+                    <h3>Fishing</h3>
+                    <p>Early morning catch and release at the beautiful lodge lake.</p>
+                </div>
+                <div class="activity-card slide-up delay-1">
+                    <div class="activity-icon">🥾</div>
+                    <h3>Hiking</h3>
+                    <p>Guided nature walks through the scenic whispering pines trails.</p>
+                </div>
+                <div class="activity-card slide-up delay-2">
+                    <div class="activity-icon">🎯</div>
+                    <h3>Kids Games</h3>
+                    <p>Face painting, crafts, sack races and treasure hunts for the young ones.</p>
+                </div>
+                <div class="activity-card slide-up delay-3">
+                    <div class="activity-icon">🎤</div>
+                    <h3>Talent Show</h3>
+                    <p>Show off your unique skills and talents after Saturday night's dinner!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Family Gallery Section -->
+    <section id="gallery" class="gallery section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center slide-up">
+                <h2>Family Gallery</h2>
+                <div class="divider"><svg viewBox="0 0 100 20" width="100" height="20"><path d="M0 10 Q 25 0, 50 10 T 100 10" fill="none" stroke="#6F4E37" stroke-width="2"/></svg></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item slide-up" data-src="https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+                    <div class="gallery-img g1"></div>
+                    <div class="gallery-overlay"><span>View Memory</span></div>
+                </div>
+                <div class="gallery-item slide-up delay-1" data-src="https://images.unsplash.com/photo-1529156069898-49953eb1f5bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+                    <div class="gallery-img g2"></div>
+                    <div class="gallery-overlay"><span>View Memory</span></div>
+                </div>
+                <div class="gallery-item slide-up delay-2" data-src="https://images.unsplash.com/photo-1600742118320-c26ff3ba3244?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+                    <div class="gallery-img g3"></div>
+                    <div class="gallery-overlay"><span>View Memory</span></div>
+                </div>
+                <div class="gallery-item slide-up delay-3" data-src="https://images.unsplash.com/photo-1476610182048-b716b8518aae?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+                    <div class="gallery-img g4"></div>
+                    <div class="gallery-overlay"><span>View Memory</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8 & 10. FAQ & Venue Section -->
+    <section id="faq-venue" class="section-padding">
+        <div class="container dual-col">
+            <div id="faq" class="faq-container slide-right">
+                <div class="section-header">
+                    <h2>FAQ</h2>
+                    <div class="divider"><svg viewBox="0 0 100 20" width="100" height="20"><path d="M0 10 Q 25 0, 50 10 T 100 10" fill="none" stroke="#6F4E37" stroke-width="2"/></svg></div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">Can I bring pets?</button>
+                        <div class="accordion-content"><p>Well-behaved dogs are welcome at the campground and designated cabins. Please keep them leashed and clean up after them.</p></div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">Are meals included?</button>
+                        <div class="accordion-content"><p>Yes, all main meals (breakfast, lunch, and dinner) are included in the reunion package. Please bring your own specialty snacks and beverages.</p></div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">What should I bring?</button>
+                        <div class="accordion-content"><p>Comfortable casual clothing, hiking shoes, swimwear, sunscreen, bug spray, and your favorite family recipes or old photos to share!</p></div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">Is lodging available?</button>
+                        <div class="accordion-content"><p>Yes, we have blocked out cabins, hotel rooms, and RV spots. See the Lodging section above to reserve your spot.</p></div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">Are children welcome?</button>
+                        <div class="accordion-content"><p>Absolutely! This is a multi-generational family event. We have specific activities planned for kids of all ages.</p></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="venue" class="venue-container slide-left">
+                <div class="section-header">
+                    <h2>Venue & Directions</h2>
+                    <div class="divider"><svg viewBox="0 0 100 20" width="100" height="20"><path d="M0 10 Q 25 0, 50 10 T 100 10" fill="none" stroke="#6F4E37" stroke-width="2"/></svg></div>
+                </div>
+                <div class="venue-card">
+                    <h3>Whispering Pines Lodge</h3>
+                    <p class="venue-address">123 Nature Trail<br>Forestville, CA 90210</p>
+                    <div class="map-placeholder">
+                        <div class="map-bg"></div>
+                        <span>Map View Placeholder</span>
+                    </div>
+                    <p class="parking-info"><strong>Parking:</strong> Ample free parking is available near the main lodge and directly outside the family cabins.</p>
+                    <a href="#" class="btn btn-primary full-width ripple">Get Directions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. Family Memories Section -->
+    <section id="memories" class="memories section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center slide-up">
+                <h2>Family Memories</h2>
+                <div class="divider"><svg viewBox="0 0 100 20" width="100" height="20"><path d="M0 10 Q 25 0, 50 10 T 100 10" fill="none" stroke="#6F4E37" stroke-width="2"/></svg></div>
+            </div>
+            <div class="memories-grid">
+                <div class="memory-card slide-up">
+                    <p class="quote">"The 2015 reunion at the lake is still my favorite childhood memory. Can't wait to recreate those moments!"</p>
+                    <p class="author">- Sarah Johnson</p>
+                </div>
+                <div class="memory-card slide-up delay-1">
+                    <p class="quote">"Uncle Bob's BBQ ribs are the real reason I fly across the country every five years. The family is just a bonus!"</p>
+                    <p class="author">- Mike Smith</p>
+                </div>
+                <div class="memory-card slide-up delay-2">
+                    <p class="quote">"Seeing four generations gathered around one campfire is a beautiful reminder of our strong roots."</p>
+                    <p class="author">- Grandma Eleanor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. RSVP Section -->
+    <section id="rsvp" class="rsvp section-padding bg-terracotta text-white">
+        <div class="container">
+            <div class="rsvp-wrapper slide-up">
+                <div class="rsvp-content">
+                    <h2>Join the Celebration</h2>
+                    <p>We can't wait to see you! Please RSVP by June 1st so we can finalize our preparations for food and activities.</p>
+                    
+                    <div class="animated-counter">
+                        <div class="counter-item">
+                            <span class="count" data-target="150">0</span>
+                            <span class="label">Family Members Expected</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="rsvp-form-container">
+                    <form id="rsvp-form" class="rsvp-form" novalidate>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required placeholder="John Doe">
+                            <span class="error-msg">Please enter your full name.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required placeholder="john@example.com">
+                            <span class="error-msg">Please enter a valid email address.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Number of Guests</label>
+                            <input type="number" id="guests" min="1" max="15" required placeholder="1">
+                            <span class="error-msg">Please enter the number of guests.</span>
+                        </div>
+                        <div class="form-group">
+                            <label>Will you be attending?</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="attending" value="yes" checked> Joyfully Accept</label>
+                                <label><input type="radio" name="attending" value="no"> Regretfully Decline</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary ripple full-width">Confirm RSVP</button>
+                    </form>
+                    <div id="form-success" class="hidden success-message">
+                        <h3>Thank you!</h3>
+                        <p>Your RSVP has been received. We'll be in touch soon.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>Johnson Family</h2>
+                    <p>Rooted in Love. Growing in Memories.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                </div>
+                <div class="footer-contact">
+                    <p>Contact: reunion@johnsonfamily.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Johnson Family Reunion. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
+
+    <!-- Gallery Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Family Memory">
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

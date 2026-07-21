@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Leadership Gala 2024</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0a0a0c;
+            --bg-secondary: #141416;
+            --text-main: #ffffff;
+            --text-muted: #a0a0a0;
+            --gold: #D4AF37;
+            --gold-hover: #e5c158;
+            --font-headings: 'Poppins', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Back Button */
+        .back-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 1rem;
+            z-index: 9999;
+        }
+
+        .back-btn {
+            background: #000;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+            border: 1px solid #333;
+            transition: background 0.3s;
+            font-family: var(--font-body);
+        }
+
+        .back-btn:hover {
+            background: #222;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-headings);
+            font-weight: 600;
+        }
+
+        .gold-text {
+            color: var(--gold);
+        }
+
+        /* Header */
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+        }
+
+        .logo {
+            font-family: var(--font-headings);
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--gold);
+        }
+
+        .logo span {
+            font-size: 0.8rem;
+            color: var(--text-main);
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        nav.main-nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .btn {
+            background-color: var(--gold);
+            color: var(--bg-color);
+            padding: 10px 24px;
+            border: none;
+            border-radius: 4px;
+            font-family: var(--font-headings);
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s, transform 0.3s;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: var(--gold-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            background: linear-gradient(rgba(10, 10, 12, 0.7), rgba(10, 10, 12, 0.9)), url('https://picsum.photos/seed/gala/1920/1080') center/cover no-repeat;
+            margin-top: 0;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            line-height: 1.1;
+        }
+
+        .hero h2 {
+            font-size: 1.2rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .event-details {
+            display: flex;
+            gap: 2rem;
+            font-family: var(--font-headings);
+            color: var(--gold);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        /* Sections General */
+        section {
+            padding: 6rem 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 4rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Highlights */
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .highlight-item {
+            padding: 2rem;
+        }
+
+        .highlight-icon {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-item p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Speakers */
+        .speakers {
+            background-color: var(--bg-secondary);
+        }
+
+        .speakers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .speaker-card {
+            text-align: center;
+        }
+
+        .speaker-img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+            filter: grayscale(20%);
+            transition: filter 0.3s;
+        }
+
+        .speaker-card:hover .speaker-img {
+            filter: grayscale(0%);
+        }
+
+        .speaker-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .speaker-card .title {
+            color: var(--gold);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .speaker-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Schedule */
+        .schedule {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background-color: var(--gold);
+            opacity: 0.3;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3rem;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--gold);
+            transform: translateX(-5px);
+        }
+
+        .timeline-time {
+            font-family: var(--font-headings);
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #050505;
+            padding: 4rem 5% 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 3rem;
+        }
+
+        .footer-logo {
+            font-family: var(--font-headings);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.05);
+            color: var(--text-main);
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .footer-social a:hover {
+            background-color: var(--gold);
+            color: var(--bg-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        /* Floating Audio Button */
+        .audio-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--gold);
+            color: var(--bg-color);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            z-index: 1000;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .audio-btn:hover {
+            transform: scale(1.1);
+            background-color: var(--gold-hover);
+        }
+
+        /* Scroll Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero h1 { font-size: 3.5rem; }
+            .event-details { flex-direction: column; gap: 0.5rem; }
+            .footer-content { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            header { padding: 4rem 20px 1rem; flex-direction: column; gap: 1.5rem; }
+            .back-nav { padding: 10px; }
+            nav.main-nav { flex-direction: column; }
+            .nav-links { flex-wrap: wrap; justify-content: center; }
+            .hero h1 { font-size: 2.5rem; }
+            .footer-content { grid-template-columns: 1fr; gap: 2rem; }
+            .audio-btn { bottom: 20px; right: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="back-nav">
+        <a href="../../portfolio.html" class="back-btn">← Back to Portfolio</a>
+    </nav>
+
+    <header>
+        <div class="logo">
+            GLG
+            <span>Global<br>Leadership<br>Gala</span>
+        </div>
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#highlights">Event Info</a></li>
+                <li><a href="#schedule">Agenda</a></li>
+                <li><a href="#speakers">Speakers</a></li>
+                <li><a href="#venue">Venue</a></li>
+                <li><a href="#sponsor">Sponsor</a></li>
+            </ul>
+            <a href="#register" class="btn">Register Now</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1 class="reveal"><span class="gold-text">GLOBAL LEADERSHIP</span><br>GALA 2024</h1>
+        <h2 class="reveal">Honoring Excellence, Inspiring the Future.</h2>
+        
+        <div class="event-details reveal">
+            <span>NOVEMBER 16, 2024</span>
+            <span>|</span>
+            <span>NEW YORK CITY</span>
+            <span>|</span>
+            <span>GOTHAM HALL</span>
+        </div>
+
+        <p class="reveal">Join global leaders for an unforgettable evening of networking, awards, and celebration. Elevating innovation and impact.</p>
+        
+        <a href="#register" class="btn reveal">Secure Your Seat</a>
+    </section>
+
+    <section id="highlights">
+        <h2 class="section-title reveal">Event Highlights</h2>
+        <div class="highlights-grid">
+            <div class="highlight-item reveal">
+                <div class="highlight-icon">🏆</div>
+                <h3>Awards Ceremony</h3>
+                <p>Recognizing outstanding achievements across multiple industries and sectors. Celebrating those who push boundaries.</p>
+            </div>
+            <div class="highlight-item reveal">
+                <div class="highlight-icon">🎙️</div>
+                <h3>Keynote Speakers</h3>
+                <p>Hear from visionary leaders shaping the future of global business, technology, and social impact initiatives.</p>
+            </div>
+            <div class="highlight-item reveal">
+                <div class="highlight-icon">🤝</div>
+                <h3>Networking</h3>
+                <p>Connect with peers, mentors, and industry titans in an elegant setting designed to foster meaningful relationships.</p>
+            </div>
+            <div class="highlight-item reveal">
+                <div class="highlight-icon">🍽️</div>
+                <h3>Fine Dining</h3>
+                <p>Enjoy a curated culinary experience prepared by world-renowned chefs, paired with exceptional wines.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="speakers" class="speakers">
+        <h2 class="section-title reveal">Featured Speakers</h2>
+        <div class="speakers-grid">
+            <div class="speaker-card reveal">
+                <img src="https://picsum.photos/seed/speaker1/400/500" alt="Dr. Eleanor Vance" class="speaker-img">
+                <h3>Dr. Eleanor Vance</h3>
+                <div class="title">CEO, Innovate Global</div>
+                <p>Pioneering new approaches in sustainable technology and global infrastructure development.</p>
+            </div>
+            <div class="speaker-card reveal">
+                <img src="https://picsum.photos/seed/speaker2/400/500" alt="Michael Chen" class="speaker-img">
+                <h3>Michael Chen</h3>
+                <div class="title">Founder, NextGen Ventures</div>
+                <p>Leading investor in AI and deep tech, reshaping how we interact with machine learning.</p>
+            </div>
+            <div class="speaker-card reveal">
+                <img src="https://picsum.photos/seed/speaker3/400/500" alt="Sarah J. Thompson" class="speaker-img">
+                <h3>Sarah J. Thompson</h3>
+                <div class="title">Author & Philanthropist</div>
+                <p>Bestselling author advocating for equitable education and widespread digital literacy.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="schedule" class="schedule">
+        <h2 class="section-title reveal">Event Schedule</h2>
+        <h3 class="reveal" style="text-align: center; margin-bottom: 3rem; color: var(--gold);">Evening Itinerary</h3>
+        
+        <div class="timeline">
+            <div class="timeline-item reveal">
+                <div class="timeline-time">6:00 PM</div>
+                <div class="timeline-content">
+                    <h3>Reception</h3>
+                    <p>Cocktails, hors d'oeuvres, and initial networking in the grand foyer.</p>
+                </div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-time">7:00 PM</div>
+                <div class="timeline-content">
+                    <h3>Keynote Address</h3>
+                    <p>Opening remarks and featured keynote presentation in the main hall.</p>
+                </div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-time">8:00 PM</div>
+                <div class="timeline-content">
+                    <h3>Gala Dinner</h3>
+                    <p>Four-course curated dining experience accompanied by live acoustic music.</p>
+                </div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-time">9:30 PM</div>
+                <div class="timeline-content">
+                    <h3>Awards Ceremony</h3>
+                    <p>Presentation of the 2024 Global Leadership Excellence Awards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content reveal">
+            <div>
+                <div class="footer-logo">GLOBAL LEADERSHIP GALA</div>
+                <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 300px; margin-bottom: 1rem;">
+                    Connecting minds, celebrating excellence, and inspiring the next generation of global leaders.
+                </p>
+                <div class="footer-social">
+                    <a href="#">f</a>
+                    <a href="#">t</a>
+                    <a href="#">in</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Press</a>
+                <a href="#">Sponsors</a>
+            </div>
+            <div class="footer-links">
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Code of Conduct</a>
+                <a href="#">FAQ</a>
+            </div>
+        </div>
+        <div class="footer-bottom reveal">
+            &copy; 2024 GLOBAL LEADERSHIP COUNCIL. ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+
+    <!-- Audio Player -->
+    <audio id="bg-music" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+    <button class="audio-btn" id="audio-toggle" aria-label="Toggle Background Music">
+        🎵
+    </button>
+
+    <script>
+        // Scroll Reveal
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal(); // Trigger on load
+
+        // Audio Toggle
+        const audioBtn = document.getElementById('audio-toggle');
+        const bgMusic = document.getElementById('bg-music');
+        let isPlaying = false;
+
+        audioBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                bgMusic.pause();
+                audioBtn.innerHTML = '🎵';
+            } else {
+                bgMusic.play();
+                audioBtn.innerHTML = '⏸️';
+            }
+            isPlaying = !isPlaying;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Vibes Fest | The Future of Music</title>
+    <meta name="description" content="Experience the future of music at Neon Vibes Fest. A premium cyberpunk-inspired music festival.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Modern Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="equalizer">
+            <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+        </div>
+        <h2>NEON VIBES</h2>
+    </div>
+
+    <!-- Floating Particles Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+                <nav class="back-nav">
+<a href="../../portfolio.html" class="back-btn">← Back to Portfolio</a>
+</nav>
+            <a href="#home" class="logo">NEON<span>VIBES</span></a>
+            <div class="hamburger" aria-label="Toggle Navigation" role="button" tabindex="0">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#highlights">Highlights</a></li>
+                <li><a href="#lineup">Lineup</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#tickets">Tickets</a></li>
+                <li><a href="#venue">Venue</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#sponsors">Sponsors</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero section-dark">
+        <div class="hero-content">
+            <h1 class="glitch" data-text="NEON VIBES FEST">NEON VIBES FEST</h1>
+            <p class="tagline">Experience the Future of Music</p>
+            <p class="date">August 12-14, 2026</p>
+            <div class="hero-buttons">
+                <a href="#tickets" class="btn btn-primary neon-btn">Buy Tickets</a>
+                <a href="#lineup" class="btn btn-outline neon-btn-outline">View Lineup</a>
+            </div>
+        </div>
+        <!-- Mouse Parallax Background Shapes -->
+        <div class="mouse-parallax" id="hero-parallax">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </header>
+
+    <!-- Countdown Timer Section -->
+    <section id="countdown-section" class="countdown-section">
+        <div class="container">
+            <div class="countdown-container" id="countdown">
+                <div class="time-box">
+                    <span id="days" class="time-val">00</span>
+                    <span class="time-label">Days</span>
+                </div>
+                <div class="time-box">
+                    <span id="hours" class="time-val">00</span>
+                    <span class="time-label">Hours</span>
+                </div>
+                <div class="time-box">
+                    <span id="minutes" class="time-val">00</span>
+                    <span class="time-label">Minutes</span>
+                </div>
+                <div class="time-box">
+                    <span id="seconds" class="time-val">00</span>
+                    <span class="time-label">Seconds</span>
+                </div>
+            </div>
+            <h2 id="countdown-expired" class="hidden">Welcome to Neon Vibes Fest!</h2>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Welcome to the <span>Future</span></h2>
+            <div class="about-grid reveal">
+                <div class="about-text glass-card">
+                    <h3>A Multisensory Experience</h3>
+                    <p>Neon Vibes Fest is not just a music festival; it's a journey into the future. Combining cutting-edge electronic and multi-genre music with state-of-the-art visual installations, we create an immersive world of sound and light.</p>
+                    <p>Join over 100,000 festival-goers for three days of non-stop energy, gourmet food vendors, interactive art installations, and unforgettable performances.</p>
+                </div>
+                <div class="about-stats glass-card">
+                    <div class="stat-item">
+                        <span class="stat-number counter" data-target="3">0</span>
+                        <span class="stat-label">Stages</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number counter" data-target="50">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Artists</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number counter" data-target="72">0</span>
+                        <span class="stat-label">Hours of Music</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SVG Wave Separator -->
+    <div class="wave-divider section-dark">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="var(--bg-dark)"></path>
+        </svg>
+    </div>
+
+    <!-- Highlights Section -->
+    <section id="highlights" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Festival <span>Highlights</span></h2>
+            <div class="highlights-grid">
+                <div class="highlight-card glass-card reveal">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+                    </div>
+                    <h3>3 Mega Stages</h3>
+                    <p>Experience diverse sounds across our Neon, Cyber, and Nova stages.</p>
+                </div>
+                <div class="highlight-card glass-card reveal" style="transition-delay: 100ms;">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    </div>
+                    <h3>VIP Lounge</h3>
+                    <p>Exclusive viewing areas, premium bars, and luxury amenities.</p>
+                </div>
+                <div class="highlight-card glass-card reveal" style="transition-delay: 200ms;">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2z"></path><path d="M3 19a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"></path></svg>
+                    </div>
+                    <h3>Camping Area</h3>
+                    <p>Stay close to the action with our futuristic camping pods.</p>
+                </div>
+                <div class="highlight-card glass-card reveal">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+                    </div>
+                    <h3>Food Court</h3>
+                    <p>Gourmet food trucks and diverse culinary experiences.</p>
+                </div>
+                <div class="highlight-card glass-card reveal" style="transition-delay: 100ms;">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
+                    </div>
+                    <h3>Merchandise</h3>
+                    <p>Exclusive festival gear and limited edition artist merch.</p>
+                </div>
+                <div class="highlight-card glass-card reveal" style="transition-delay: 200ms;">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+                    </div>
+                    <h3>Art Installations</h3>
+                    <p>Interactive and glowing sculptures throughout the venue.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lineup Section -->
+    <section id="lineup" class="section">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Artist <span>Lineup</span></h2>
+            <div class="filter-container reveal">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="EDM">EDM</button>
+                <button class="filter-btn" data-filter="Pop">Pop</button>
+                <button class="filter-btn" data-filter="Hip-Hop">Hip-Hop</button>
+                <button class="filter-btn" data-filter="Rock">Rock</button>
+                <button class="filter-btn" data-filter="DJ">DJ</button>
+            </div>
+            
+            <div class="lineup-grid reveal" id="lineup-grid">
+                <!-- Populated via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Timeline Section -->
+    <section id="schedule" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Festival <span>Schedule</span></h2>
+            <div class="timeline reveal">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="time">12:00 PM</div>
+                        <h3>Gates Open</h3>
+                        <p>Welcome to Neon Vibes! Grab your merch and explore the grounds.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="time">02:00 PM</div>
+                        <h3>Opening Acts</h3>
+                        <p>Local talent and rising stars kick off the music.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="time">05:00 PM</div>
+                        <h3>Main Stage Opens</h3>
+                        <p>The energy builds up as international acts take the main stage.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="time">08:00 PM</div>
+                        <h3>Sunset Show</h3>
+                        <p>Experience the transition from day to glowing night.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="time">10:30 PM</div>
+                        <h3>Headliners</h3>
+                        <p>The biggest names in music deliver unforgettable performances.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="time">12:30 AM</div>
+                        <h3>Fireworks</h3>
+                        <p>A spectacular light and pyrotechnic display over the valley.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="time">02:00 AM</div>
+                        <h3>Closing Performance</h3>
+                        <p>The final beats drop before we rest for the next day.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tickets Section -->
+    <section id="tickets" class="section">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Get Your <span>Tickets</span></h2>
+            <div class="pricing-grid">
+                <div class="pricing-card glass-card reveal">
+                    <h3>General Admission</h3>
+                    <div class="price">$199</div>
+                    <ul class="benefits">
+                        <li>3-Day Festival Access</li>
+                        <li>Access to all general areas</li>
+                        <li>Food Court access</li>
+                        <li>Free water stations</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline neon-btn-outline">Buy Tickets</a>
+                </div>
+                <div class="pricing-card glass-card premium reveal" style="transition-delay: 100ms;">
+                    <div class="badge">Most Popular</div>
+                    <h3>VIP Pass</h3>
+                    <div class="price">$499</div>
+                    <ul class="benefits">
+                        <li>Everything in GA</li>
+                        <li>Fast entry lane</li>
+                        <li>Exclusive VIP Lounge</li>
+                        <li>Premium viewing areas</li>
+                        <li>Private restrooms</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary neon-btn">Buy Tickets</a>
+                </div>
+                <div class="pricing-card glass-card reveal" style="transition-delay: 200ms;">
+                    <h3>Ultimate Experience</h3>
+                    <div class="price">$999</div>
+                    <ul class="benefits">
+                        <li>Everything in VIP</li>
+                        <li>Meet & Greet access</li>
+                        <li>Backstage tour</li>
+                        <li>Exclusive merch pack</li>
+                        <li>Free locker rental</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline neon-btn-outline">Buy Tickets</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Venue & Map -->
+    <section id="venue" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title text-center reveal">The <span>Venue</span></h2>
+            <div class="venue-container glass-card reveal">
+                <div class="venue-info">
+                    <h3>Neon Valley Grounds</h3>
+                    <p class="address">123 Cyberpunk Ave, Future City, NV 80808</p>
+                    <ul class="venue-details">
+                        <li><strong>Parking:</strong> Available on-site (passes sold separately)</li>
+                        <li><strong>Transport:</strong> Free shuttles from downtown</li>
+                        <li><strong>Weather:</strong> Rain or shine event</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary neon-btn">Get Directions</a>
+                </div>
+                <div class="venue-map">
+                    <div class="map-placeholder">
+                        <span>Interactive Map Placeholder</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Past <span>Memories</span></h2>
+            <div class="gallery-masonry reveal" id="gallery-container">
+                <!-- Populated via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section id="sponsors" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Our <span>Sponsors</span></h2>
+            <div class="sponsors-grid reveal">
+                <div class="sponsor-card glass-card"><span>Sponsor Logo</span></div>
+                <div class="sponsor-card glass-card"><span>Sponsor Logo</span></div>
+                <div class="sponsor-card glass-card"><span>Sponsor Logo</span></div>
+                <div class="sponsor-card glass-card"><span>Sponsor Logo</span></div>
+                <div class="sponsor-card glass-card"><span>Sponsor Logo</span></div>
+                <div class="sponsor-card glass-card"><span>Sponsor Logo</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Frequently Asked <span>Questions</span></h2>
+            <div class="faq-container reveal">
+                <div class="faq-item glass-card">
+                    <button class="faq-question">Can I bring outside food? <span class="icon">+</span></button>
+                    <div class="faq-answer"><p>No outside food or drinks are allowed, but we have a massive food court accommodating all dietary needs.</p></div>
+                </div>
+                <div class="faq-item glass-card">
+                    <button class="faq-question">Is parking available? <span class="icon">+</span></button>
+                    <div class="faq-answer"><p>Yes, premium and general parking are available. We recommend buying passes in advance as they sell out fast.</p></div>
+                </div>
+                <div class="faq-item glass-card">
+                    <button class="faq-question">What items are prohibited? <span class="icon">+</span></button>
+                    <div class="faq-answer"><p>Weapons, illegal substances, glass containers, professional cameras without a pass, and drones are strictly prohibited.</p></div>
+                </div>
+                <div class="faq-item glass-card">
+                    <button class="faq-question">Can I re-enter? <span class="icon">+</span></button>
+                    <div class="faq-answer"><p>Re-entry is only permitted for VIP and Ultimate Experience pass holders with their intact wristbands.</p></div>
+                </div>
+                <div class="faq-item glass-card">
+                    <button class="faq-question">Are tickets refundable? <span class="icon">+</span></button>
+                    <div class="faq-answer"><p>Tickets are non-refundable, but they are fully transferable through our official exchange platform.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="section section-dark">
+        <div class="container">
+            <div class="newsletter-box glass-card reveal">
+                <h2>Stay in the <span>Loop</span></h2>
+                <p>Subscribe for lineup announcements, exclusive offers, and festival news.</p>
+                <form id="newsletter-form" class="newsletter-form" novalidate>
+                    <input type="email" id="email-input" placeholder="Enter your email address" aria-label="Email Address" required>
+                    <button type="submit" class="btn btn-primary neon-btn">Subscribe</button>
+                </form>
+                <p id="form-message" class="form-message"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>NEON<span>VIBES</span></h2>
+                    <p>Experience the future of music.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#lineup">Lineup</a></li>
+                        <li><a href="#tickets">Tickets</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                        <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5v3a3 3 0 0 1-3-3"></path></svg></a>
+                        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#" aria-label="Twitter X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l16 16m0-16L4 20"></path></svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Neon Vibes Fest. All rights reserved.</p>
+                <button id="back-to-top" aria-label="Back to top">↑</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox for Gallery -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox" aria-label="Close Lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Gallery preview">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

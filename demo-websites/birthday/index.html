@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="You're invited to Luna's unforgettable 30th birthday celebration." />
+    <meta name="theme-color" content="#111827" />
+    <meta property="og:title" content="Luna's 30th — An evening to remember" />
+    <meta property="og:description" content="Thirty, thriving, and ready to celebrate." />
+    <title>Luna's 30th — An evening to remember</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Poppins:wght@400;500;600;700&family=Sacramento&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"Event","name":"Luna's 30th Birthday","startDate":"2026-08-22T20:00:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"The Grand Ballroom","address":"123 Celebration Avenue, New York, NY"},"description":"Thirty, thriving, and ready to celebrate the best night ever."}
+    </script>
+  </head>
+  <body>
+
+    <nav class="back-nav">
+      <a href="../../portfolio.html" class="back-btn">← Back to Portfolio</a>
+    </nav>
+
+    <div class="loader" id="loader" aria-live="polite">
+      <div class="loader-mark">L<span>30</span></div>
+      <p>Preparing something unforgettable</p>
+      <div class="loader-line"><i></i></div>
+    </div>
+    <div class="progress" id="progress" aria-hidden="true"></div>
+    <canvas id="confetti" aria-hidden="true"></canvas>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="nav" id="top">
+      <a class="brand" href="#home" aria-label="Luna's 30th home"><span>L</span>una <em>30</em></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
+      <nav id="nav-links" aria-label="Main navigation">
+        <a href="#story">The story</a>
+        <a href="#details">Details</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#rsvp" class="nav-rsvp">RSVP <b>↗</b></a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode" title="Switch to light mode"><span>☼</span><span>☾</span></button>
+    </header>
+
+    <main>
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-lights" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="hero-stars" aria-hidden="true"></div>
+        <div class="balloon balloon-one" aria-hidden="true"></div>
+        <div class="balloon balloon-two" aria-hidden="true"></div>
+        <div class="balloon balloon-three" aria-hidden="true"></div>
+        <p class="eyebrow hero-eyebrow"><span></span> A milestone soiree <span></span></p>
+        <div class="hero-copy">
+          <p class="script">join the celebration</p>
+          <h1 id="hero-title">Luna’s<br /><i>30<sup>th</sup></i></h1>
+          <p class="hero-tagline">Thirty, thriving, and ready to celebrate<br />the best night ever.</p>
+          <div class="hero-facts" aria-label="Event details">
+            <span><b>22</b> AUG <em>•</em> SATURDAY</span>
+            <span><b>8:00</b> PM <em>•</em> GRAND BALLROOM</span>
+          </div>
+          <a class="button button-primary" href="#rsvp"><span>Reserve your place</span><b>→</b></a>
+        </div>
+        <a href="#countdown" class="scroll-cue"><small>scroll to begin</small><i></i></a>
+        <div class="hero-orbit" aria-hidden="true"><span>CELEBRATE</span><b>✦</b><span>THE MOMENT</span><b>✦</b></div>
+      </section>
+
+      <section class="countdown-section section" id="countdown" aria-labelledby="countdown-title">
+        <div class="section-head centered reveal">
+          <p class="eyebrow"><span></span> the countdown <span></span></p>
+          <h2 id="countdown-title">The night begins<br /><i>in a little while.</i></h2>
+        </div>
+        <div class="countdown reveal" aria-label="Countdown to August 22, 2026 at 8 PM">
+          <div class="time-card"><strong id="days">00</strong><span>Days</span></div>
+          <i>:</i>
+          <div class="time-card"><strong id="hours">00</strong><span>Hours</span></div>
+          <i>:</i>
+          <div class="time-card"><strong id="minutes">00</strong><span>Minutes</span></div>
+          <i>:</i>
+          <div class="time-card"><strong id="seconds">00</strong><span>Seconds</span></div>
+        </div>
+        <p class="countdown-note reveal">August 22, 2026 <span>•</span> The Grand Ballroom <span>•</span> 8:00 PM</p>
+      </section>
+
+      <section class="story section" id="story" aria-labelledby="story-title">
+        <div class="story-visual reveal-left">
+          <div class="image-frame large-image"><img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1200&q=85" alt="Purple birthday cake with glowing candles" fetchpriority="high" /></div>
+          <div class="image-frame small-image"><img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=600&q=85" alt="Colorful balloons at a party" loading="lazy" /></div>
+          <div class="story-sticker"><span>30</span><small>years of<br />magic</small></div>
+        </div>
+        <div class="story-copy reveal-right">
+          <p class="eyebrow"><span></span> this is thirty</p>
+          <h2 id="story-title">One luminous night.<br /><i>A lifetime in bloom.</i></h2>
+          <p>Join us as Luna celebrates 30 incredible years filled with unforgettable memories, beautiful friendships, and exciting new beginnings.</p>
+          <p>Dress up, dance all night, and help make this milestone celebration something we’ll talk about for years to come.</p>
+          <a href="#details" class="text-link">Discover the details <b>→</b></a>
+        </div>
+      </section>
+
+      <section class="details section" id="details" aria-labelledby="details-title">
+        <div class="details-intro reveal">
+          <p class="eyebrow"><span></span> save the date</p>
+          <h2 id="details-title">A little <i>glamour</i><br />goes a long way.</h2>
+          <p>Come for the champagne sparkle. Stay for the stories, the music, and one very special birthday wish.</p>
+        </div>
+        <div class="detail-grid">
+          <article class="detail-card reveal"><span class="detail-number">01</span><div class="detail-icon">◷</div><h3>When</h3><p>Saturday<br /><b>August 22, 2026</b><br />8:00 PM onwards</p></article>
+          <article class="detail-card reveal"><span class="detail-number">02</span><div class="detail-icon">⌖</div><h3>Where</h3><p>The Grand Ballroom<br /><b>123 Celebration Avenue</b><br />New York, NY</p></article>
+          <article class="detail-card reveal"><span class="detail-number">03</span><div class="detail-icon">✦</div><h3>Dress code</h3><p>Make it memorable<br /><b>Glamorous cocktail</b><br />with a touch of gold</p></article>
+          <article class="detail-card reveal"><span class="detail-number">04</span><div class="detail-icon">♬</div><h3>The vibe</h3><p>Champagne & small plates<br /><b>Live DJ & photo booth</b><br />until the very last song</p></article>
+        </div>
+      </section>
+
+      <section class="schedule section" aria-labelledby="schedule-title">
+        <div class="section-head centered reveal">
+          <p class="eyebrow"><span></span> order of the evening <span></span></p>
+          <h2 id="schedule-title">A night that only<br /><i>gets better.</i></h2>
+        </div>
+        <ol class="timeline">
+          <li class="reveal"><time>8:00 PM</time><span class="timeline-dot">✦</span><div><h3>Guest arrival</h3><p>Find your sparkle, find your people.</p></div></li>
+          <li class="reveal"><time>8:30 PM</time><span class="timeline-dot">♢</span><div><h3>Welcome drinks</h3><p>Signature sips and golden hellos.</p></div></li>
+          <li class="reveal"><time>9:15 PM</time><span class="timeline-dot">✦</span><div><h3>Dinner & toasts</h3><p>Good food, better stories.</p></div></li>
+          <li class="reveal"><time>10:15 PM</time><span class="timeline-dot">♢</span><div><h3>The birthday cake</h3><p>Thirty candles. One very big wish.</p></div></li>
+          <li class="reveal"><time>10:30 PM</time><span class="timeline-dot">✦</span><div><h3>Dance party</h3><p>The DJ turns it all the way up.</p></div></li>
+          <li class="reveal"><time>11:30 PM</time><span class="timeline-dot">♢</span><div><h3>Photo session</h3><p>Catch the glow before the last call.</p></div></li>
+          <li class="reveal"><time>Late</time><span class="timeline-dot">♢</span><div><h3>After party</h3><p>For the night owls and the not-yet-done.</p></div></li>
+        </ol>
+      </section>
+
+      <section class="venue section" aria-labelledby="venue-title">
+        <div class="venue-map reveal-left">
+          <iframe title="Map showing The Grand Ballroom location" loading="lazy" src="https://www.google.com/maps?q=The+Grand+Ballroom+New+York&output=embed"></iframe>
+          <div class="map-pin"><i>✦</i></div>
+        </div>
+        <div class="venue-copy reveal-right">
+          <p class="eyebrow"><span></span> meet us there</p>
+          <h2 id="venue-title">The <i>Grand<br />Ballroom.</i></h2>
+          <p>Under the chandeliers and into the night. The Grand Ballroom sets the scene for a beautiful celebration with room for every toast, twirl, and candid photo.</p>
+          <address>123 Celebration Avenue<br />New York, New York</address>
+          <a class="button button-outline" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=The+Grand+Ballroom+New+York"><span>Open in Google Maps</span><b>↗</b></a>
+        </div>
+      </section>
+
+      <section class="gallery section" id="gallery" aria-labelledby="gallery-title">
+        <div class="gallery-heading reveal">
+          <div><p class="eyebrow"><span></span> scenes to remember</p><h2 id="gallery-title">A little <i>preview</i><br />of the magic.</h2></div>
+          <p>Think dazzling details, big feelings,<br />and the kind of joy that photographs beautifully.</p>
+        </div>
+        <div class="masonry" id="masonry">
+          <button class="gallery-item tall reveal" data-full="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1800&q=90" aria-label="View balloon party photo"><img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80" alt="Colorful balloons floating at a celebration" loading="lazy" /><span>Open image <b>↗</b></span></button>
+          <button class="gallery-item wide reveal" data-full="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1800&q=90" aria-label="View party confetti photo"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1000&q=80" alt="Friends celebrating with confetti" loading="lazy" /><span>Open image <b>↗</b></span></button>
+          <button class="gallery-item reveal" data-full="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1800&q=90" aria-label="View birthday cake photo"><img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=700&q=80" alt="Birthday cake with sparkling candles" loading="lazy" /><span>Open image <b>↗</b></span></button>
+          <button class="gallery-item reveal" data-full="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1800&q=90" aria-label="View champagne photo"><img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=700&q=80" alt="Champagne glasses for a toast" loading="lazy" /><span>Open image <b>↗</b></span></button>
+          <button class="gallery-item wide reveal" data-full="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=1800&q=90" aria-label="View celebration decor photo"><img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=1000&q=80" alt="Softly lit celebration decor" loading="lazy" /><span>Open image <b>↗</b></span></button>
+        </div>
+      </section>
+
+      <section class="memories section" aria-labelledby="memories-title">
+        <div class="section-head centered reveal"><p class="eyebrow"><span></span> the Luna archives <span></span></p><h2 id="memories-title">Thirty years of<br /><i>beautiful becoming.</i></h2></div>
+        <div class="memory-track">
+          <article class="memory-card reveal"><span>01</span><div class="memory-photo"><img src="https://images.unsplash.com/photo-1602030028438-4cf153cbae9e?auto=format&fit=crop&w=800&q=80" alt="Sunlit childhood memory" loading="lazy" /></div><h3>Childhood</h3><p>Curious eyes, grass-stained knees, and a head full of dreams.</p></article>
+          <article class="memory-card reveal"><span>02</span><div class="memory-photo"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80" alt="Friends sharing a happy moment" loading="lazy" /></div><h3>Teen years</h3><p>Late nights, loud laughs, and friendships for the ages.</p></article>
+          <article class="memory-card reveal"><span>03</span><div class="memory-photo"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Students celebrating on campus" loading="lazy" /></div><h3>College</h3><p>Big ideas, brave leaps, and a little bit of mischief.</p></article>
+          <article class="memory-card reveal"><span>04</span><div class="memory-photo"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=800&q=80" alt="Creative team celebrating together" loading="lazy" /></div><h3>Career</h3><p>Building a life that feels brilliantly, entirely hers.</p></article>
+          <article class="memory-card reveal"><span>05</span><div class="memory-photo"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Mountain travel adventure" loading="lazy" /></div><h3>Travel</h3><p>Chasing horizons and bringing stories home.</p></article>
+          <article class="memory-card reveal"><span>06</span><div class="memory-photo"><img src="https://images.unsplash.com/photo-1513159446162-54eb8bdaa79b?auto=format&fit=crop&w=800&q=80" alt="Colorful confetti birthday celebration" loading="lazy" /></div><h3>Today</h3><p>Thirty, radiant, and only just getting started.</p></article>
+        </div>
+      </section>
+
+      <section class="highlights section" aria-labelledby="highlights-title">
+        <div class="highlights-copy reveal-left"><p class="eyebrow"><span></span> just wait until you see</p><h2 id="highlights-title">What’s on the<br /><i>guest list?</i></h2><p>A night crafted for every kind of reveler. Bring your best energy — we’ll take care of the rest.</p></div>
+        <div class="highlight-grid">
+          <div class="highlight-card reveal"><b>🎂</b><span>Giant birthday<br />cake</span></div><div class="highlight-card reveal"><b>🎧</b><span>Live DJ<br />set</span></div><div class="highlight-card reveal"><b>📸</b><span>Photo<br />booth</span></div><div class="highlight-card reveal"><b>🍹</b><span>Signature<br />cocktails</span></div><div class="highlight-card reveal"><b>🎁</b><span>Surprise<br />gifts</span></div><div class="highlight-card reveal"><b>💃</b><span>Dance<br />floor</span></div>
+        </div>
+      </section>
+
+      <section class="rsvp section" id="rsvp" aria-labelledby="rsvp-title">
+        <div class="rsvp-paint" aria-hidden="true"></div>
+        <div class="rsvp-copy reveal-left"><p class="eyebrow"><span></span> your seat is waiting</p><h2 id="rsvp-title">Ready to make<br /><i>an entrance?</i></h2><p>The only thing missing is you. Let Luna know you’re coming and prepare for an unforgettable evening.</p><div class="rsvp-note"><b>✦</b><span>Please reply by <strong>August 8</strong></span></div></div>
+        <form class="rsvp-card reveal-right" id="rsvp-form" novalidate>
+          <div class="form-heading"><span>RSVP</span><small>01 / 01</small></div>
+          <label>Full name<input type="text" name="name" autocomplete="name" placeholder="Your name" required /></label>
+          <div class="form-row"><label>Email<input type="email" name="email" autocomplete="email" placeholder="you@email.com" required /></label><label>Guests<select name="guests" aria-label="Number of guests"><option>1 guest</option><option>2 guests</option><option>3 guests</option><option>4 guests</option></select></label></div>
+          <label>Phone number<input type="tel" name="phone" autocomplete="tel" placeholder="(555) 000-0000" /></label>
+          <fieldset><legend>Will you be joining us?</legend><div class="attendance"><label><input type="radio" name="attendance" value="Absolutely" required /><span>Absolutely</span></label><label><input type="radio" name="attendance" value="Maybe" /><span>Maybe</span></label><label><input type="radio" name="attendance" value="Cannot make it" /><span>Sadly no</span></label></div></fieldset>
+          <label>A little note for Luna <textarea name="message" rows="2" placeholder="Share the love…"></textarea></label>
+          <p class="form-error" id="form-error" role="alert"></p>
+          <button class="button button-primary submit-button" type="submit"><span>Send RSVP</span><b>→</b></button>
+        </form>
+        <div class="rsvp-success" id="rsvp-success" role="status" aria-live="polite"><div><span>✦</span><h3>You’re on the list!</h3><p>We can’t wait to celebrate with you.</p><button class="text-link" type="button" id="close-success">Back to the invitation <b>→</b></button></div></div>
+      </section>
+
+      <section class="wishes section" aria-labelledby="wishes-title">
+        <div class="section-head centered reveal"><p class="eyebrow"><span></span> leave some love <span></span></p><h2 id="wishes-title">A note for the<br /><i>birthday girl.</i></h2></div>
+        <div class="wish-layout">
+          <div class="wish-list" id="wish-list" aria-live="polite">
+            <article class="wish-card reveal"><span>“</span><p>Luna, may this next chapter be even more glittering than the last. Here’s to your biggest year yet!</p><footer>— Mila <b>♥</b></footer></article>
+            <article class="wish-card reveal"><span>“</span><p>Thirty looks extraordinary on you. I can’t wait to dance the night away together!</p><footer>— James <b>♥</b></footer></article>
+            <article class="wish-card reveal"><span>“</span><p>Cheers to the warmest heart and the most beautiful kind of magic. Love you always.</p><footer>— Aria <b>♥</b></footer></article>
+          </div>
+          <form class="wish-form reveal" id="wish-form"><p>Write Luna a little something <i>♥</i></p><label>Your name<input name="wishName" required placeholder="Name" /></label><label>Your wish<textarea name="wishText" required rows="4" placeholder="Make it personal…"></textarea></label><button class="button button-outline" type="submit"><span>Send birthday wish</span><b>♥</b></button></form>
+        </div>
+      </section>
+
+      <section class="instagram section" aria-labelledby="instagram-title">
+        <div class="instagram-top reveal"><div><p class="eyebrow"><span></span> catch the glow</p><h2 id="instagram-title">See you on<br /><i>the dancefloor.</i></h2></div><div class="hashtags"><a href="#gallery">#LunaTurns30</a><a href="#gallery">#CheersTo30</a></div></div>
+        <div class="insta-grid reveal"><div><img src="https://images.unsplash.com/photo-1464207687429-7505649dae38?auto=format&fit=crop&w=700&q=80" alt="Pink balloons" loading="lazy" /></div><div><img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=700&q=80" alt="Party decorations" loading="lazy" /></div><div class="insta-callout"><span>Follow the<br />moment</span><b>↗</b></div><div><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=700&q=80" alt="Friends at a vibrant party" loading="lazy" /></div><div><img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=700&q=80" alt="Celebration with colorful confetti" loading="lazy" /></div></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer-script">Thirty & thriving</p><h2>Thank you for celebrating<br />this special milestone with Luna.</h2>
+      <div class="share-row"><button class="share-button" data-share="whatsapp" aria-label="Share on WhatsApp">WA</button><button class="share-button" data-share="facebook" aria-label="Share on Facebook">f</button><button class="share-button" data-share="instagram" aria-label="Copy Instagram caption">◎</button><button class="share-button" data-share="copy" aria-label="Copy invitation link">↗</button></div>
+      <div class="footer-base"><a class="brand" href="#home"><span>L</span>una <em>30</em></a><p>Made with <b>♥</b> &nbsp; © 2026 All rights reserved.</p><a href="#home" class="back-top">Back to top ↑</a></div>
+    </footer>
+
+    <button class="music-player" id="music-player" aria-pressed="false" aria-label="Play ambient celebration music"><span class="music-icon">▶</span><span class="music-label">Play the mood</span><i class="equalizer"><b></b><b></b><b></b></i></button>
+    <button class="to-top" id="to-top" aria-label="Scroll back to top">↑</button>
+    <dialog class="lightbox" id="lightbox"><button class="lightbox-close" aria-label="Close image">×</button><img id="lightbox-image" src="" alt="" /><p id="lightbox-caption"></p></dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

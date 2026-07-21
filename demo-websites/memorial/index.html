@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="In Loving Memory - A peaceful memorial tribute honoring a loved one.">
+    <title>In Loving Memory | Memorial Tribute</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <svg class="loader-icon" viewBox="0 0 24 24" width="40" height="40" stroke="currentColor" stroke-width="1" fill="none">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <nav class="back-nav">
+<a href="../../portfolio.html" class="back-btn">← Back to Portfolio</a>
+</nav>
+        <div class="container nav-container">
+            <a href="#hero" class="nav-logo">Forever Remembered</a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#tribute" class="nav-link">Tribute</a></li>
+                    <li><a href="#obituary" class="nav-link">Obituary</a></li>
+                    <li><a href="#service" class="nav-link">Service</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#timeline" class="nav-link">Timeline</a></li>
+                    <li><a href="#guestbook" class="nav-link">Guestbook</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section id="hero" class="hero section-padding">
+            <div class="container hero-container reveal">
+                <div class="hero-image-wrapper">
+                    <!-- Placeholder Portrait -->
+                    <div class="portrait-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hero-content">
+                    <span class="subtitle">In Loving Memory</span>
+                    <h1 class="title">Eleanor Grace Smith</h1>
+                    <p class="dates">March 14, 1942 &mdash; July 18, 2026</p>
+                    <div class="divider">
+                        <svg width="40" height="12" viewBox="0 0 40 12" fill="none">
+                            <path d="M20 0L23.5 6L20 12L16.5 6L20 0Z" fill="currentColor"/>
+                            <line x1="0" y1="6" x2="15" y2="6" stroke="currentColor" stroke-width="0.5"/>
+                            <line x1="25" y1="6" x2="40" y2="6" stroke="currentColor" stroke-width="0.5"/>
+                        </svg>
+                    </div>
+                    <blockquote class="hero-quote">
+                        "Those we love don't go away, they walk beside us every day. Unseen, unheard, but always near, so loved, so missed, so very dear."
+                    </blockquote>
+                    <a href="#service" class="btn btn-primary">View Service Details</a>
+                </div>
+            </div>
+            <div class="floating-leaves">
+                <!-- SVG decorative leaves added via CSS/JS -->
+            </div>
+        </section>
+
+        <!-- 2. Memorial Tribute -->
+        <section id="tribute" class="tribute section-padding bg-alt">
+            <div class="container reveal">
+                <div class="section-header">
+                    <h2>A Beautiful Life</h2>
+                    <div class="divider-simple"></div>
+                </div>
+                <div class="tribute-content">
+                    <p class="lead-text">We gather to celebrate a life beautifully lived and a heart deeply loved.</p>
+                    <p>Eleanor's presence brought warmth and light to everyone who knew her. Her kindness, resilience, and unwavering love for her family created a legacy that will continue to inspire us. She found joy in the simple things—a blooming garden, a quiet morning with coffee, and the laughter of her grandchildren.</p>
+                    <div class="family-message card">
+                        <h3>A Message from the Family</h3>
+                        <p>We are profoundly grateful for the outpouring of love, prayers, and support during this difficult time. Your shared memories and kind words bring us immense comfort as we honor Eleanor's extraordinary life.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Obituary -->
+        <section id="obituary" class="obituary section-padding">
+            <div class="container reveal">
+                <div class="section-header">
+                    <h2>Obituary</h2>
+                    <div class="divider-simple"></div>
+                </div>
+                <div class="obituary-text content-card">
+                    <p>Eleanor Grace Smith, 84, of Springfield, passed away peacefully surrounded by her family on July 18, 2026. Born on March 14, 1942, to Thomas and Mary Johnson, Eleanor lived a life defined by compassion and grace.</p>
+                    <p>She graduated from State University in 1964 with a degree in Education and dedicated over 30 years to teaching elementary school, touching the lives of countless children. In 1966, she married her beloved husband, Robert Smith, with whom she shared 58 wonderful years.</p>
+                    <p>Eleanor was a devoted mother to her three children: David (Sarah), Emily (Michael), and James. She was the cherished grandmother to seven grandchildren who were the light of her life.</p>
+                    <p>Beyond her family, Eleanor was an active member of the community garden club and volunteered faithfully at the local library. Her famous apple pie and her ability to listen without judgment will be deeply missed by all who had the privilege of knowing her.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Service Details -->
+        <section id="service" class="service section-padding bg-alt">
+            <div class="container reveal">
+                <div class="section-header">
+                    <h2>Service Details</h2>
+                    <div class="divider-simple"></div>
+                </div>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Memorial Service</h3>
+                        <p class="date">Saturday, August 1, 2026</p>
+                        <p class="time">11:00 AM</p>
+                        <p class="venue">Grace Community Church</p>
+                        <p class="address">123 Peaceful Lane, Springfield</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3>Reception</h3>
+                        <p class="date">Following the Service</p>
+                        <p class="time">12:30 PM - 3:00 PM</p>
+                        <p class="venue">Church Fellowship Hall</p>
+                        <p class="address">Light refreshments will be served.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
+                                <polyline points="17 2 12 7 7 2"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Livestream</h3>
+                        <p class="date">For those unable to attend</p>
+                        <p class="time">Broadcast begins at 10:45 AM</p>
+                        <a href="#" class="btn btn-outline" style="margin-top: 1rem;">View Livestream</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Photo Gallery -->
+        <section id="gallery" class="gallery section-padding">
+            <div class="container reveal">
+                <div class="section-header">
+                    <h2>Cherished Memories</h2>
+                    <div class="divider-simple"></div>
+                </div>
+                <div class="gallery-grid">
+                    <!-- Gallery Item Placeholders -->
+                    <div class="gallery-item" tabindex="0" role="button" aria-label="View larger image">
+                        <div class="image-placeholder">Family Portrait, 1985</div>
+                    </div>
+                    <div class="gallery-item" tabindex="0" role="button" aria-label="View larger image">
+                        <div class="image-placeholder">Wedding Day, 1966</div>
+                    </div>
+                    <div class="gallery-item" tabindex="0" role="button" aria-label="View larger image">
+                        <div class="image-placeholder">With Grandchildren, 2010</div>
+                    </div>
+                    <div class="gallery-item" tabindex="0" role="button" aria-label="View larger image">
+                        <div class="image-placeholder">Gardening, 2015</div>
+                    </div>
+                    <div class="gallery-item" tabindex="0" role="button" aria-label="View larger image">
+                        <div class="image-placeholder">Travels in Europe, 1998</div>
+                    </div>
+                    <div class="gallery-item" tabindex="0" role="button" aria-label="View larger image">
+                        <div class="image-placeholder">Anniversary Celebration, 2016</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox" aria-hidden="true">
+            <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+            <div class="lightbox-content">
+                <div class="lightbox-placeholder" id="lightbox-img"></div>
+            </div>
+        </div>
+
+        <!-- 6. Timeline of Life -->
+        <section id="timeline" class="timeline-section section-padding bg-alt">
+            <div class="container reveal">
+                <div class="section-header">
+                    <h2>Timeline of Life</h2>
+                    <div class="divider-simple"></div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">1942</span>
+                            <h3>A Bright Beginning</h3>
+                            <p>Born on March 14 in Springfield to Thomas and Mary Johnson.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">1964</span>
+                            <h3>College Graduation</h3>
+                            <p>Graduated from State University with a degree in Elementary Education, beginning her lifelong passion for teaching.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">1966</span>
+                            <h3>Marriage to Robert</h3>
+                            <p>Married Robert Smith in a beautiful autumn ceremony.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">1970 - 1978</span>
+                            <h3>Growing Family</h3>
+                            <p>Welcomed three wonderful children: David, Emily, and James.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2005</span>
+                            <h3>Retirement</h3>
+                            <p>Retired after 30 dedicated years of teaching, receiving the district's "Teacher of the Year" award.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2026</span>
+                            <h3>A Lasting Legacy</h3>
+                            <p>Leaves behind a family bound by her teachings of love and kindness.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Digital Guestbook -->
+        <section id="guestbook" class="guestbook section-padding">
+            <div class="container reveal">
+                <div class="section-header">
+                    <h2>Digital Guestbook</h2>
+                    <p>Please share your memories, stories, and condolences.</p>
+                    <div class="divider-simple"></div>
+                </div>
+                
+                <div class="guestbook-container">
+                    <div class="guestbook-form-wrapper">
+                        <form id="guestbook-form" class="guestbook-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="relationship">Relationship</label>
+                                <input type="text" id="relationship" name="relationship" placeholder="Friend, Colleague, Family...">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Tribute Message</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Share a memory or kind words..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Sign Guestbook</button>
+                        </form>
+                        <div id="form-success" class="form-success" aria-hidden="true">
+                            <p>Thank you. Your message has been added to the guestbook.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="guestbook-entries" id="guestbook-entries">
+                        <!-- Entries will be loaded here via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Flowers & Donations -->
+        <section id="donations" class="donations section-padding bg-alt">
+            <div class="container reveal">
+                <div class="section-header">
+                    <h2>Flowers & Donations</h2>
+                    <div class="divider-simple"></div>
+                </div>
+                <div class="donations-content">
+                    <p class="family-wishes">In lieu of flowers, the family kindly requests that donations be made to causes close to Eleanor's heart.</p>
+                    <div class="donations-actions">
+                        <div class="action-card">
+                            <div class="icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                </svg>
+                            </div>
+                            <h3>Memorial Fund</h3>
+                            <p>Contributions to the Children's Literacy Foundation.</p>
+                            <a href="#" class="btn btn-outline">Make a Donation</a>
+                        </div>
+                        <div class="action-card">
+                            <div class="icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                                </svg>
+                            </div>
+                            <h3>Send Flowers</h3>
+                            <p>Through the family's preferred local florist.</p>
+                            <a href="#" class="btn btn-outline">Order Flowers</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. FAQ -->
+        <section id="faq" class="faq section-padding">
+            <div class="container reveal">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="divider-simple"></div>
+                </div>
+                <div class="accordion" id="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            Where is the service located?
+                            <span class="icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>The memorial service will be held at Grace Community Church, located at 123 Peaceful Lane, Springfield. The reception will immediately follow in the church fellowship hall.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            Is parking available?
+                            <span class="icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Yes, ample parking is available in the church's main lot and the overflow lot directly across the street.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            Will the service be livestreamed?
+                            <span class="icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Yes, for those unable to attend in person, a livestream link is available in the Service Details section above. The broadcast will begin at 10:45 AM.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            May I send flowers?
+                            <span class="icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>While flowers are welcome, the family kindly suggests considering a donation to the Children's Literacy Foundation in Eleanor's honor, as reading and teaching were her life's passions.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            How can I support the family?
+                            <span class="icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Your thoughts, prayers, and stories are the greatest support. Please consider leaving a message in the Digital Guestbook to share your memories with the family.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Contact Information -->
+        <section id="contact" class="contact section-padding bg-alt">
+            <div class="container reveal">
+                <div class="section-header">
+                    <h2>Contact Information</h2>
+                    <div class="divider-simple"></div>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h4>Family Contact</h4>
+                        <p>For personal messages to the family outside of the guestbook.</p>
+                        <a href="mailto:family@example.com" class="contact-link">family@example.com</a>
+                    </div>
+                    <div class="contact-card">
+                        <h4>Funeral Home</h4>
+                        <p>Springfield Memorial Chapels</p>
+                        <a href="tel:+15551234567" class="contact-link">(555) 123-4567</a>
+                        <p class="small-text">456 Main St, Springfield</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 11. Footer -->
+    <footer class="footer">
+        <div class="container">
+            <h2 class="footer-title">Forever Remembered</h2>
+            <p class="footer-thanks">The family of Eleanor Smith extends their deepest gratitude for your love, support, and presence.</p>
+            <div class="footer-divider"></div>
+            <p class="copyright">&copy; <span id="current-year"></span> In Loving Memory of Eleanor Smith. Designed with reverence.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

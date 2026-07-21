@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechForward Summit 2026 | Where Innovation Meets the Future</title>
+    <meta name="description" content="The premier conference for developers, innovators, and tech leaders.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkNavy: '#0B1120',
+                        slateDark: '#111827',
+                        electricBlue: '#3B82F6',
+                        cyanNeon: '#06B6D4',
+                        purpleNeon: '#8B5CF6',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0B1120;
+            color: #E2E8F0;
+            overflow-x: hidden;
+        }
+
+        .glass {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .neon-border {
+            position: relative;
+        }
+
+        .neon-border::after {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            background: linear-gradient(45deg, #3B82F6, #8B5CF6, #06B6D4);
+            z-index: -1;
+            border-radius: inherit;
+            opacity: 0.3;
+            transition: opacity 0.3s ease;
+        }
+
+        .neon-border:hover::after {
+            opacity: 0.8;
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.15) 0%, rgba(11, 17, 32, 0) 70%);
+        }
+
+        #particle-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #3B82F6, #06B6D4, #8B5CF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0B1120;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #1E293B;
+            border-radius: 10px;
+        }
+
+        .back-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 1rem;
+            z-index: 1000;
+            display: block;
+            unicode-bidi: isolate;
+        }
+
+        .back-btn {
+            background: #000;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body class="custom-scrollbar">
+
+    <nav class="back-nav">
+      <a href="../../portfolio.html" class="back-btn">← Back to Portfolio</a>
+    </nav>
+
+    <!-- Background Particles -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-gradient-to-br from-electricBlue to-purpleNeon rounded-lg flex items-center justify-center">
+                    <i data-lucide="zap" class="text-white w-6 h-6"></i>
+                </div>
+                <span class="font-heading font-bold text-xl tracking-tight">TechForward <span class="text-electricBlue">2026</span></span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#about" class="hover:text-electricBlue transition">About</a>
+                <a href="#speakers" class="hover:text-electricBlue transition">Speakers</a>
+                <a href="#schedule" class="hover:text-electricBlue transition">Schedule</a>
+                <a href="#pricing" class="hover:text-electricBlue transition">Pricing</a>
+                <a href="#register" class="px-6 py-2.5 bg-electricBlue hover:bg-blue-600 rounded-full transition shadow-lg shadow-blue-500/20">Register Now</a>
+            </div>
+
+            <button class="md:hidden text-white">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 hero-gradient">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-cyanNeon text-sm font-medium mb-6">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyanNeon opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-cyanNeon"></span>
+                    </span>
+                    Registration Open Now
+                </div>
+                <h1 class="font-heading text-6xl md:text-8xl font-bold leading-tight mb-6">
+                    Where Innovation Meets the <span class="text-gradient">Future</span>
+                </h1>
+                <p class="text-lg text-slate-400 mb-8 max-w-lg leading-relaxed">
+                    The premier conference for developers, innovators, entrepreneurs, and technology leaders shaping tomorrow. Join 5,000+ peers in the heart of San Francisco.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#register" class="px-8 py-4 bg-electricBlue hover:bg-blue-600 rounded-xl font-bold transition-all transform hover:scale-105 shadow-xl shadow-blue-500/25">
+                        Claim Your Pass
+                    </a>
+                    <a href="#schedule" class="px-8 py-4 glass hover:bg-white/10 rounded-xl font-bold transition-all">
+                        View Schedule
+                    </a>
+                </div>
+                <div class="mt-12 flex gap-8">
+                    <div>
+                        <p class="text-3xl font-heading font-bold">5,000+</p>
+                        <p class="text-sm text-slate-500 uppercase tracking-widest">Attendees</p>
+                    </div>
+                    <div class="border-l border-white/10 pl-8">
+                        <p class="text-3xl font-heading font-bold">60+</p>
+                        <p class="text-sm text-slate-500 uppercase tracking-widest">Speakers</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative" data-aos="fade-left">
+                <!-- Floating Info Cards -->
+                <div class="glass p-8 rounded-3xl relative z-10 overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <i data-lucide="cpu" class="w-32 h-32"></i>
+                    </div>
+                    <div class="flex flex-col gap-6">
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-cyanNeon/10 rounded-lg text-cyanNeon">
+                                <i data-lucide="calendar"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold">September 18–20, 2026</h3>
+                                <p class="text-slate-400 text-sm">Save the date for the tech event of the year.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-purpleNeon/10 rounded-lg text-purpleNeon">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold">San Francisco, CA</h3>
+                                <p class="text-slate-400 text-sm">Moscone Center & Innovation Labs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Countdown -->
+                    <div class="grid grid-cols-4 gap-4 mt-10" id="countdown">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-white bg-white/5 rounded-lg py-3 days">00</div>
+                            <span class="text-[10px] uppercase text-slate-500 mt-2 block tracking-tighter">Days</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-white bg-white/5 rounded-lg py-3 hours">00</div>
+                            <span class="text-[10px] uppercase text-slate-500 mt-2 block tracking-tighter">Hours</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-white bg-white/5 rounded-lg py-3 minutes">00</div>
+                            <span class="text-[10px] uppercase text-slate-500 mt-2 block tracking-tighter">Mins</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-white bg-white/5 rounded-lg py-3 seconds">00</div>
+                            <span class="text-[10px] uppercase text-slate-500 mt-2 block tracking-tighter">Secs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-slateDark/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-heading font-bold mb-6">Redefining Innovation</h2>
+                <p class="text-slate-400">Join the world's leading minds as we explore the boundaries of Artificial Intelligence, Cyber Security, and the next generation of the web.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-2xl border border-white/5 hover:border-electricBlue/50 transition group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-electricBlue/20 rounded-xl flex items-center justify-center text-electricBlue mb-6 group-hover:scale-110 transition">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Elite Networking</h3>
+                    <p class="text-slate-400 leading-relaxed">Connect with CTOs, lead developers, and founders from Fortune 500 companies and unicorn startups.</p>
+                </div>
+                <div class="glass p-8 rounded-2xl border border-white/5 hover:border-cyanNeon/50 transition group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-cyanNeon/20 rounded-xl flex items-center justify-center text-cyanNeon mb-6 group-hover:scale-110 transition">
+                        <i data-lucide="code-2"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Hands-on Workshops</h3>
+                    <p class="text-slate-400 leading-relaxed">Deep-dive into technical sessions led by the engineers who built the tools you use every day.</p>
+                </div>
+                <div class="glass p-8 rounded-2xl border border-white/5 hover:border-purpleNeon/50 transition group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-purpleNeon/20 rounded-xl flex items-center justify-center text-purpleNeon mb-6 group-hover:scale-110 transition">
+                        <i data-lucide="rocket"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Startup Showcase</h3>
+                    <p class="text-slate-400 leading-relaxed">Witness the next big thing in our startup pitch competition with $500k in non-dilutive prizes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speakers Section -->
+    <section id="speakers" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl font-heading font-bold mb-4">Featured Speakers</h2>
+                    <p class="text-slate-400">Industry visionaries and technical pioneers.</p>
+                </div>
+                <a href="#" class="text-electricBlue font-bold hover:underline flex items-center gap-2" data-aos="fade-left">
+                    View all 60+ speakers <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Speaker Card 1 -->
+                <div class="group" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="relative overflow-hidden rounded-2xl mb-4 bg-slate-800 aspect-[4/5]">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400" alt="Speaker" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-darkNavy via-transparent to-transparent opacity-60"></div>
+                        <div class="absolute bottom-4 left-4 right-4 flex gap-2">
+                            <a href="#" class="w-8 h-8 glass rounded-full flex items-center justify-center hover:bg-electricBlue transition"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                            <a href="#" class="w-8 h-8 glass rounded-full flex items-center justify-center hover:bg-electricBlue transition"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold">Dr. Sarah Chen</h3>
+                    <p class="text-sm text-cyanNeon mb-2 tracking-wide uppercase">VP of AI, NeuralFlow</p>
+                    <p class="text-sm text-slate-400 line-clamp-2">Pioneer in LLM optimization and autonomous systems with 15+ years experience.</p>
+                </div>
+
+                <!-- Speaker Card 2 -->
+                <div class="group" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="relative overflow-hidden rounded-2xl mb-4 bg-slate-800 aspect-[4/5]">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400" alt="Speaker" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-darkNavy via-transparent to-transparent opacity-60"></div>
+                        <div class="absolute bottom-4 left-4 right-4 flex gap-2">
+                            <a href="#" class="w-8 h-8 glass rounded-full flex items-center justify-center hover:bg-electricBlue transition"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold">Marcus Sterling</h3>
+                    <p class="text-sm text-purpleNeon mb-2 tracking-wide uppercase">CTO, CloudScale Inc.</p>
+                    <p class="text-sm text-slate-400 line-clamp-2">Leading the transition to serverless global architectures for 50M+ users.</p>
+                </div>
+
+                <!-- Speaker Card 3 -->
+                <div class="group" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="relative overflow-hidden rounded-2xl mb-4 bg-slate-800 aspect-[4/5]">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400" alt="Speaker" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-darkNavy via-transparent to-transparent opacity-60"></div>
+                        <div class="absolute bottom-4 left-4 right-4 flex gap-2">
+                            <a href="#" class="w-8 h-8 glass rounded-full flex items-center justify-center hover:bg-electricBlue transition"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold">Elena Rodriguez</h3>
+                    <p class="text-sm text-electricBlue mb-2 tracking-wide uppercase">Security Researcher</p>
+                    <p class="text-sm text-slate-400 line-clamp-2">Ethical hacker and architect of the "Shield-Core" cybersecurity protocol.</p>
+                </div>
+
+                <!-- Speaker Card 4 -->
+                <div class="group" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="relative overflow-hidden rounded-2xl mb-4 bg-slate-800 aspect-[4/5]">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400" alt="Speaker" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-darkNavy via-transparent to-transparent opacity-60"></div>
+                        <div class="absolute bottom-4 left-4 right-4 flex gap-2">
+                            <a href="#" class="w-8 h-8 glass rounded-full flex items-center justify-center hover:bg-electricBlue transition"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold">David Park</h3>
+                    <p class="text-sm text-cyanNeon mb-2 tracking-wide uppercase">Founder, Web3 Pioneer</p>
+                    <p class="text-sm text-slate-400 line-clamp-2">Building decentralized infrastructure for the next billion Internet users.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 bg-slateDark/30">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-heading font-bold mb-4">Choose Your Experience</h2>
+                <p class="text-slate-400">Flexible options for every type of innovator.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 items-center">
+                <!-- Basic -->
+                <div class="glass p-10 rounded-3xl border border-white/5 text-center transition hover:scale-105" data-aos="fade-right">
+                    <p class="text-slate-400 uppercase text-xs tracking-widest font-bold mb-4">Student Pass</p>
+                    <div class="text-5xl font-heading font-bold mb-8">$99</div>
+                    <ul class="text-left space-y-4 mb-10 text-slate-300">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyanNeon"></i> All Sessions</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyanNeon"></i> Virtual Access</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyanNeon"></i> Digital Certificate</li>
+                        <li class="flex items-center gap-2 text-slate-600"><i data-lucide="x" class="w-4 h-4"></i> Workshops</li>
+                    </ul>
+                    <a href="#register" class="block w-full py-3 border border-white/10 rounded-xl hover:bg-white/5 transition">Select Pass</a>
+                </div>
+
+                <!-- Pro (Popular) -->
+                <div class="glass p-10 rounded-3xl border-2 border-electricBlue text-center relative transition hover:scale-105" data-aos="fade-up">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-electricBlue px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Most Popular</div>
+                    <p class="text-electricBlue uppercase text-xs tracking-widest font-bold mb-4">General Admission</p>
+                    <div class="text-5xl font-heading font-bold mb-8">$199</div>
+                    <ul class="text-left space-y-4 mb-10 text-slate-300">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyanNeon"></i> All Keynotes & Sessions</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyanNeon"></i> Workshop Access</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyanNeon"></i> Networking Dinner</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyanNeon"></i> Swag Kit (Pro)</li>
+                    </ul>
+                    <a href="#register" class="block w-full py-3 bg-electricBlue rounded-xl hover:bg-blue-600 transition shadow-lg shadow-blue-500/25">Select Pass</a>
+                </div>
+
+                <!-- VIP -->
+                <div class="glass p-10 rounded-3xl border border-white/5 text-center transition hover:scale-105" data-aos="fade-left">
+                    <p class="text-purpleNeon uppercase text-xs tracking-widest font-bold mb-4">VIP PASS</p>
+                    <div class="text-5xl font-heading font-bold mb-8">$499</div>
+                    <ul class="text-left space-y-4 mb-10 text-slate-300">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyanNeon"></i> Everything in Pro</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyanNeon"></i> 1-on-1 Speaker Meet</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyanNeon"></i> VIP Lounge Access</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyanNeon"></i> Exclusive After-Party</li>
+                    </ul>
+                    <a href="#register" class="block w-full py-3 border border-white/10 rounded-xl hover:bg-white/5 transition">Select Pass</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register" class="py-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="glass rounded-3xl overflow-hidden grid md:grid-cols-5 border border-white/10">
+                <div class="md:col-span-2 bg-gradient-to-br from-electricBlue to-purpleNeon p-10 flex flex-col justify-between text-white">
+                    <div>
+                        <h2 class="text-3xl font-heading font-bold mb-4">Reserve Your Spot</h2>
+                        <p class="opacity-90">Secure your entry to the most anticipated tech event of 2026. Limited seats available.</p>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="shield-check"></i>
+                            <span class="text-sm font-medium">Secure Payment</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="ticket"></i>
+                            <span class="text-sm font-medium">Instant E-Ticket</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <form id="regForm" class="md:col-span-3 p-10 space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase text-slate-500">Full Name</label>
+                            <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:border-electricBlue outline-none transition" placeholder="John Doe">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase text-slate-500">Email</label>
+                            <input type="email" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:border-electricBlue outline-none transition" placeholder="john@example.com">
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold uppercase text-slate-500">Company / Organization</label>
+                        <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:border-electricBlue outline-none transition" placeholder="TechCorp Intl.">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold uppercase text-slate-500">Ticket Type</label>
+                        <select class="w-full bg-slate-900 border border-white/10 rounded-lg px-4 py-3 focus:border-electricBlue outline-none transition">
+                            <option>General Admission ($199)</option>
+                            <option>Student Pass ($99)</option>
+                            <option>VIP Pass ($499)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full py-4 bg-electricBlue hover:bg-blue-600 rounded-xl font-bold transition-all transform active:scale-95 flex items-center justify-center gap-2 mt-6">
+                        Complete Registration <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    </button>
+                    <p class="text-center text-[10px] text-slate-500 mt-4">By registering, you agree to our Terms of Service and Privacy Policy.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-electricBlue rounded flex items-center justify-center">
+                            <i data-lucide="zap" class="text-white w-5 h-5"></i>
+                        </div>
+                        <span class="font-heading font-bold text-lg">TechForward 2026</span>
+                    </div>
+                    <p class="text-slate-500 max-w-sm mb-6">Advancing the global technology conversation through collaborative innovation and visionary leadership.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 glass rounded-lg flex items-center justify-center hover:text-electricBlue transition"><i data-lucide="twitter"></i></a>
+                        <a href="#" class="w-10 h-10 glass rounded-lg flex items-center justify-center hover:text-electricBlue transition"><i data-lucide="github"></i></a>
+                        <a href="#" class="w-10 h-10 glass rounded-lg flex items-center justify-center hover:text-electricBlue transition"><i data-lucide="linkedin"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-4 text-slate-500 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Schedule</a></li>
+                        <li><a href="#" class="hover:text-white transition">Speakers</a></li>
+                        <li><a href="#" class="hover:text-white transition">Venue Info</a></li>
+                        <li><a href="#" class="hover:text-white transition">Sponsorship</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Resources</h4>
+                    <ul class="space-y-4 text-slate-500 text-sm">
+                        <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white transition">Code of Conduct</a></li>
+                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Press Kit</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center text-slate-600 text-sm border-t border-white/5 pt-8">
+                &copy; 2026 TechForward Summit. All rights reserved. Built for the future.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+        
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Particle Background System
+        const canvas = document.getElementById('particle-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        window.addEventListener('resize', resize);
+        resize();
+
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.size = Math.random() * 2;
+                this.alpha = Math.random() * 0.5;
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+                    this.reset();
+                }
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(59, 130, 246, ${this.alpha})`;
+                ctx.fill();
+            }
+        }
+
+        for (let i = 0; i < 100; i++) particles.push(new Particle());
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animate);
+        }
+        animate();
+
+        // Countdown Logic
+        const targetDate = new Date('September 18, 2026 09:00:00').getTime();
+
+        setInterval(() => {
+            const now = new Date().getTime();
+            const diff = targetDate - now;
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.querySelector('.days').innerText = days.toString().padStart(2, '0');
+            document.querySelector('.hours').innerText = hours.toString().padStart(2, '0');
+            document.querySelector('.minutes').innerText = mins.toString().padStart(2, '0');
+            document.querySelector('.seconds').innerText = secs.toString().padStart(2, '0');
+        }, 1000);
+
+        // Registration Form Simulation
+        document.getElementById('regForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'Processing...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                btn.innerHTML = 'Success! Redirecting...';
+                btn.classList.replace('bg-electricBlue', 'bg-emerald-500');
+                alert('Welcome to TechForward 2026! Check your email for your ticket.');
+            }, 1500);
+        });
+
+        // Mouse Move Parallax for Hero Glass Card
+        document.addEventListener('mousemove', (e) => {
+            const card = document.querySelector('.glass');
+            const xAxis = (window.innerWidth / 2 - e.pageX) / 50;
+            const yAxis = (window.innerHeight / 2 - e.pageY) / 50;
+            // card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`; // Subtle tilt disabled for performance, but ready to use
+        });
+    </script>
+</body>
+</html>
